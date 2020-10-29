@@ -3,9 +3,9 @@
 import React, {useState} from 'react';
 
 
-const CharityList = () => {
+const AnimalList = () => {
 
-    const [charities] = useState([
+    const [animals] = useState([
         {
             name: 'Alley Cat Allies',
             category: 'animals',
@@ -142,4 +142,4 @@ const CharityList = () => {
     )
 }
 
-export default CharityList;
+export default AnimalList;
