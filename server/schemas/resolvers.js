@@ -37,7 +37,33 @@ const resolvers = {
 
       const token = signToken(user);
       return { token, user };
-    }
+    },
+    saveCharity: async (parent, { charityData }, context) => {
+        if (context.user) {
+            const updatedUser = await User.findByIdAndUpdate(
+                { _id: context.user._id },
+                { $push: { savedCharity: charityData } },
+                { new: true }
+            );
+            return updatedUser
+        }
+
+        throw new AuthenticationError('Login required!');
+    },
+
+    removeCharity: async (parent, { charityData }, context) => {
+        if (context.user) {
+          const updatedUser = await User.findOneAndUpdate(
+            { _id: context.user._id },
+            { $pull: { savedCharity: { charityData } } },
+            { new: true }
+          );
+  
+          return updatedUser;
+        }
+  
+        throw new AuthenticationError('You need to be logged in!');
+      },
   }
 }
 
