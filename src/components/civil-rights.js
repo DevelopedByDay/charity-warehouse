@@ -89,10 +89,22 @@ const civilRightsList = () => {
 
 
     return (
-        <div>
-
-        </div>
-    )
+        <section>
+            <h1>Civil Rights</h1>
+            <ul>
+                {civilRights.map((civilRights) => (
+                    <li key = {civilRights.name}>
+                        <span>
+                            {civilRights.name}
+                            {civilRights.location}
+                            {civilRights.website}
+                            {civilRights.mission}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+        </section>
+    );
 }
 
 export default civilRightsList;

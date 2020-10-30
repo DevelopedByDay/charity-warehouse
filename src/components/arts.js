@@ -87,8 +87,22 @@ const artsList = () => {
     ])
 
     return (
-        <div></div>
-    )
+        <section>
+            <h1>Arts and Humanities</h1>
+            <ul>
+                {arts.map((arts) => (
+                    <li key = {arts.name}>
+                        <span>
+                            {arts.name}
+                            {arts.location}
+                            {arts.website}
+                            {arts.mission}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+        </section>
+    );
 }
 
 export default artsList;

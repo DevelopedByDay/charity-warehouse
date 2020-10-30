@@ -87,10 +87,22 @@ const environmentalList = () => {
 
 
     return (
-        <div>
-
-        </div>
-    )
+        <section>
+            <h1>Environmental</h1>
+            <ul>
+                {environmental.map((environmental) => (
+                    <li key = {environmental.name}>
+                        <span>
+                            {environmental.name}
+                            {environmental.location}
+                            {environmental.website}
+                            {environmental.mission}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+        </section>
+    );
 }
 
 export default environmentalList;
