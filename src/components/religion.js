@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 
 const ReligionList = () => {
     
-    const [religion] = useState([
+    const [religions] = useState([
         {
             name: 'AMG International',
             category: 'religion',
@@ -157,9 +157,21 @@ const ReligionList = () => {
     ])
 
     return (
-        <div>
-
-        </div>
+        <section>
+        <h1>Religeous</h1>
+        <ul>
+            {religions.map((religion) => (
+                <li key = {religion.name}>
+                    <span>
+                        {religion.name}
+                        {religion.location}
+                        {religion.website}
+                        {religion.mission}
+                    </span>
+                </li>
+            ))}
+        </ul>
+    </section>
     )
 }
 

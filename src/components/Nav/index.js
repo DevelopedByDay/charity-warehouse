@@ -13,6 +13,10 @@ function Nav() {
         { name: 'religion'}
     ];
 
+    function categorySelected(name) {
+        console.log(`${name} clicked`);
+    }
+
     return (
         <header>
             <h2>
@@ -24,7 +28,7 @@ function Nav() {
                 <ul>
                     {categories.map((category) => (
                         <li key = {category.name}>
-                            <span>
+                            <span onClick = {() => categorySelected(category.name)}>
                                 {category.name}
                             </span>
                         </li>
