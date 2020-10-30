@@ -136,10 +136,10 @@ const AnimalList = () => {
 
 
     return (
-        <div>
-
-        </div>
-    )
+        <section>
+            <h1>Animals</h1>
+        </section>
+    );
 }
 
 export default AnimalList;
