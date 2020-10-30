@@ -138,6 +138,18 @@ const AnimalList = () => {
     return (
         <section>
             <h1>Animals</h1>
+            <ul>
+                {animals.map((animal) => (
+                    <li key = {animal.name}>
+                        <span>
+                            {animal.name}
+                            {animal.location}
+                            {animal.website}
+                            {animal.mission}
+                        </span>
+                    </li>
+                ))}
+            </ul>
         </section>
     );
 }

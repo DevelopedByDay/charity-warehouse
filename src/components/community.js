@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 
 const CommDevList = () => {
 
-    const [commdev] = useState([
+    const [comdevs] = useState([
         {
             name: 'Association for Enterprise Opportunity',
             category: 'commdev',
@@ -147,9 +147,23 @@ const CommDevList = () => {
     ])
 
     return (
-        <div>
+        <section>
+            <h1>Community Development</h1>
+            <ul>
+                {comdevs.map((comdev) => (
+                    <li key = {comdev.name}>
+                        <span>
+                            {comdev.name}
+                            {comdev.location}
+                            {comdev.website}
+                            {comdev.mission}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+        </section>
 
-        </div>
+        
     )
 }
 
