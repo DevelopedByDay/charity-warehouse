@@ -1,17 +1,16 @@
 
 
 import React from 'react';
+import {capitalizeFirstLetter} from '../../utils/helpers';
 
-function Nav() {
+function Nav(props) {
 
-    const categories = [
-        { name: 'animals'},
-        { name: 'arts'},
-        { name: 'civil-rights'},
-        { name: 'community'},
-        { name: 'environmental'},
-        { name: 'religion'}
-    ];
+    const {
+        categories = [],
+        setCurrentCategory,
+        currentCategory
+    } = props;
+    
 
     return (
         <header>
@@ -23,9 +22,9 @@ function Nav() {
             <nav>
                 <ul>
                     {categories.map((category) => (
-                        <li key = {category.name}>
-                            <span>
-                                {category.name}
+                        <li className = {`${currentCategory.name === category.name}`}>
+                            <span onClick = {() => {setCurrentCategory(category)}}>
+                                {capitalizeFirstLetter(category.name)}
                             </span>
                         </li>
                     ))}
