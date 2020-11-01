@@ -1,14 +1,21 @@
+//import react library-enables JSX
 import React from 'react';
 import ReactDOM from 'react-dom';
+//import the styling
 import './index.css';
+//import the actual app
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
+//this is JSX
+ReactDOM.render(//two parameters. the first is 
+  //what do you want to render.
+  //display the app here-<App />
   <React.StrictMode>
     <App />
   </React.StrictMode>,
+  //The second is where do you want to render. we want to render in the div with id root. 
   document.getElementById('root')
 );
 
