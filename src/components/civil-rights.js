@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 
-const civilRightsList = () => {
+const CivilRightsList = () => {
 
     const [civilRights] = useState([
 
@@ -107,4 +107,4 @@ const civilRightsList = () => {
     );
 }
 
-export default civilRightsList;
+export default CivilRightsList;
