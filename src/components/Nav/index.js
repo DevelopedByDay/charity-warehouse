@@ -1,7 +1,7 @@
-
-
+//this is a nav component
 import React from 'react';
 
+//constructor function
 function Nav() {
 
     const categories = [
