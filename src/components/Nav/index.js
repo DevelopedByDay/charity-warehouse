@@ -1,21 +1,15 @@
 //this is a nav component
 import React from 'react';
+import {capitalizeFirstLetter} from '../../utils/helpers';
 
-//constructor function
-function Nav() {
+function Nav(props) {
 
-    const categories = [
-        { name: 'animals'},
-        { name: 'arts'},
-        { name: 'civil-rights'},
-        { name: 'community'},
-        { name: 'environmental'},
-        { name: 'religion'}
-    ];
-
-    function categorySelected(name) {
-        console.log(`${name} clicked`);
-    }
+    const {
+        categories = [],
+        setCurrentCategory,
+        currentCategory
+    } = props;
+    
 
     return (
         <header>
@@ -27,9 +21,9 @@ function Nav() {
             <nav>
                 <ul>
                     {categories.map((category) => (
-                        <li key = {category.name}>
-                            <span onClick = {() => categorySelected(category.name)}>
-                                {category.name}
+                        <li className = {`${currentCategory.name === category.name}`}>
+                            <span onClick = {() => {setCurrentCategory(category)}}>
+                                {capitalizeFirstLetter(category.name)}
                             </span>
                         </li>
                     ))}
