@@ -17,7 +17,7 @@ function App() {
     { name: 'religion'}
   ]);
   
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
+  const [currentCategory, setCurrentCategory] = useState({name: 'default'});
   
 
   return (
