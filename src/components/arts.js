@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const artsList = () => {
+const ArtsList = () => {
 
     const [arts] = useState([
 
@@ -105,4 +105,4 @@ const artsList = () => {
     );
 }
 
-export default artsList;
+export default ArtsList;

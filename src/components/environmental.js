@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-const environmentalList = () => {
+const EnvironmentalList = () => {
 
     const [environmental] = useState([
         {
@@ -105,4 +105,4 @@ const environmentalList = () => {
     );
 }
 
-export default environmentalList;
+export default EnvironmentalList;

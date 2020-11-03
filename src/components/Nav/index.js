@@ -22,7 +22,8 @@ function Nav(props) {
             <nav>
                 <ul>
                     {categories.map((category) => (
-                        <li className = {`${currentCategory.name === category.name}`}>
+                        <li className = {`${currentCategory.name === category.name}`}
+                            key = {category.name}>
                             <span onClick = {() => {setCurrentCategory(category)}}>
                                 {capitalizeFirstLetter(category.name)}
                             </span>

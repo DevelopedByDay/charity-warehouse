@@ -7,6 +7,7 @@ const AnimalList = () => {
 
     const [animals] = useState([
         {
+            id: 1,
             name: 'Alley Cat Allies',
             category: 'animals',
             location: 'Bethesda, MD',
@@ -22,6 +23,7 @@ const AnimalList = () => {
                         across the U.S. who provide humane care for stray and feral cats.`
         },
         {
+            id: 2,
             name: 'Wildlife Rescue & Rehabilitation',
             category: 'animals',
             location: 'Kendalia, TX',
@@ -30,6 +32,7 @@ const AnimalList = () => {
                         and a voice for other animals in need.`
         },
         {
+            id: 3,
             name: 'Israel Guide Dog Center for the Blind',
             category: 'animals',
             location: 'Warrington, PA',
@@ -44,6 +47,7 @@ const AnimalList = () => {
                         increases annually.`
         },
         {
+            id: 4,
             name: 'American Eagle Foundation',
             category: 'animals',
             location: 'Pigeon Forge, TN',
@@ -55,6 +59,7 @@ const AnimalList = () => {
                         programs. Also, numerous orphaned and injured raptors are rescued, rehabilitated and released.`
         },
         {
+            id: 5,
             name: 'Big Cat Rescue',
             category: 'animals',
             location: 'Tampa, FL',
@@ -63,6 +68,7 @@ const AnimalList = () => {
                         in captivity, and prevent extinction of big cats in the wild.`
         },
         {
+            id: 6,
             name: 'The Elephant Sanctuary',
             category: 'animals',
             location: 'Hohenwald, TN',
@@ -77,6 +83,7 @@ const AnimalList = () => {
                         is not intended to provide entertainment, and it is therefore closed to the general public.`
         },
         {
+            id: 7,
             name: 'Loggerhead Marinelife Center',
             category: 'animals',
             location: 'Juno Beach, FL',
@@ -85,6 +92,7 @@ const AnimalList = () => {
                         conservation of ocean ecosystems with a focus on threatened and endangered sea turtles.`
         },
         {
+            id: 8,
             name: 'Monterey Bay Aquarium',
             category: 'animals',
             location: 'Monterey, CA',
@@ -101,6 +109,7 @@ const AnimalList = () => {
                         visit us each year.`
         },
         {
+            id: 9,
             name: 'The Living Desert',
             category: 'animals',
             location: 'Palm Desert, CA',
@@ -115,6 +124,7 @@ const AnimalList = () => {
                         worldwide desert ecosystems.`
         },
         {
+            id: 10,
             name: 'Wildlife Conservation Society',
             category: 'animals',
             location: 'Bronx, NY',
