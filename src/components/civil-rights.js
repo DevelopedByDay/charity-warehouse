@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import civilRightsLogo from '../assets/Civil-Liberties.png';
 
 const CivilRightsList = () => {
 
@@ -89,16 +89,22 @@ const CivilRightsList = () => {
 
 
     return (
-        <section>
-            <h1>Civil Rights</h1>
-            <ul>
+        <section className="my-5">
+            {/* <h1>Civil Rights</h1> */}
+            <ul class="category">
                 {civilRights.map((civilRights) => (
-                    <li key = {civilRights.name}>
-                        <span>
-                            {civilRights.name}
-                            {civilRights.location}
-                            {civilRights.url}
-                            {civilRights.mission}
+                    <li className="my-2" key = {civilRights.name}>
+
+                        <span className="test flex-row">
+                            <div className = "flex-row">
+                               <img src={civilRightsLogo} className="miniLogo flex-row"/>
+                            <h2 className="categoryName flex-row">
+                            <a href= {civilRights.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{civilRights.name}</a>
+                            </h2>
+                            <h4 className="cityState flex-row">{civilRights.location}</h4>
+                            </div>
+                            
+                            <p>{civilRights.mission}</p>
                         </span>
                     </li>
                 ))}

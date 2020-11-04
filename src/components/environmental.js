@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import EnvLogo from '../assets/Environmental.png';
 
 
 const EnvironmentalList = () => {
@@ -87,16 +88,24 @@ const EnvironmentalList = () => {
 
 
     return (
-        <section>
-            <h1>Environmental</h1>
-            <ul>
-                {environmental.map((environmental) => (
-                    <li key = {environmental.name}>
-                        <span>
-                            {environmental.name}
-                            {environmental.location}
-                            {environmental.url}
-                            {environmental.mission}
+        <section className="my-5">
+            {/* <h1 id="">Animal Related Charities</h1> */}
+            <ul class="category">
+                {environmental.map((env) => (
+                    <li className="my-2" key = {env.name}>
+                        {/* <div>{animal.logo}</div>
+                        <div>{AnimalsLogo}</div> */}
+                        
+                        <span className="test flex-row">
+                            <div className = "flex-row">
+                               <img src={EnvLogo} className="miniLogo flex-row"/>
+                            <h2 className="categoryName flex-row">
+                            <a href= {env.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{env.name}</a>
+                            </h2>
+                            <h4 className="cityState flex-row">{env.location}</h4>
+                            </div>
+                            
+                            <p>{env.mission}</p>
                         </span>
                     </li>
                 ))}
