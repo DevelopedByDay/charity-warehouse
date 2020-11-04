@@ -4,25 +4,26 @@ import logo from '../../assets/hero.jpg';
 
 function Hero() {
 return (
-    <section>
-        <div className = "mfg-home-search-seasonal responsivebg impact-results-hero">
-          <h1 className = "mfgtextabsolute blue-on-white">
-            <span className = "background">
-              Statement Or Other Text
-            </span>
-            <a href='https://www.freepik.com/vectors/people'>People vector created by pikisuperstar - www.freepik.com</a>
+    <section className = 'my-5'>
+      <div className = 'flex-row'>
+        {/* <div className = "mfg-home-search-seasonal responsivebg impact-results-hero"> */}
+          {/* <div className = "mfgtextabsolute blue-on-white"> */}
+            {/* <span className = "background">
+            
+            </span> */}
+           
             <img src={logo} className="my-2" style={{ width: "100%" }} alt="cover" />
-          </h1>
-          <a href = "index image">
+          {/* </div> */}
+          {/* <a href = "index image">
             <h2 className = "mfgtextabsolute white-on-green">
-              <span className = "background">
-                "Statement or Other Text"
-                <span className = "green-link">Learn More...</span>
-              </span>
+              <span className = "background"></span>
+               
+                <span className = "green-link"></span>
+              
             </h2>
-          </a> 
+          </a>  */}
         </div>
-        </section>
+    </section>
 )
 }
 

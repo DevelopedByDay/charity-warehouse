@@ -55,13 +55,14 @@ const SavedCharities = () => {
           <CardColumns>
             {userData.savedCharities?.map((charity) => {
               return (
-                <Card key={charity.charityId} border='dark'>
+                <Card key={charity.id} border='dark'>
                   <Card.Body>
-                    <Card.Title>{charity.charityName}</Card.Title>
-                    <Card.Text>{charity.description}</Card.Text>
+                    <Card.Title>{charity.name}</Card.Title>
+                    <Card.Text>{charity.misson}</Card.Text>
+                    <Card.Text>{charity.url}</Card.Text>
                     <Button
                       className='btn-block btn-danger'
-                      onClick={() => handleDeleteCharity(charity.charityId)}>
+                      onClick={() => handleDeleteCharity(charity.id)}>
                       Delete this Charity!
                     </Button>
                   </Card.Body>

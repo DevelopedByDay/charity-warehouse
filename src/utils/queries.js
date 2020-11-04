@@ -7,10 +7,10 @@ export const QUERY_ME = gql`
       username
       email
       savedCharities {
-        charityId
-        charityName
-        description
-        link
+        id
+        name
+        mission
+        url
       }
     }
   }

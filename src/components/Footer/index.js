@@ -4,7 +4,7 @@ import {capitalizeFirstLetter} from '../../utils/helpers';
 
 function Footer() {
     return (
-    <section>
+    <footer>
         <div class="rounded-social-buttons">
                     <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -15,7 +15,7 @@ function Footer() {
         <div>
           giVing ©2020 Created by project-pba
         </div>
-    </section>
+    </footer>
     )
 }  
 

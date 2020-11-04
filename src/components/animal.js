@@ -7,12 +7,12 @@ const AnimalList = () => {
 
     const [animals] = useState([
         {
-            id: 1,
-            icon: AnimalsLogo,
+            // id: 1,
+            // icon: AnimalsLogo,
             name: 'Alley Cat Allies',
             category: 'animals',
             location: 'Bethesda, MD',
-            website: 'https://www.alleycat.org/',
+            url: 'https://www.alleycat.org/',
             mission: `Founded in 1990, Alley Cat Allies is dedicated to the protection and humane treatment of cats. 
                         Our mission is to end the killing of cats and lead the movement for their humane care. 
                         Alley Cat Allies has charted a course set on animal control and shelter industry reform 
@@ -24,20 +24,20 @@ const AnimalList = () => {
                         across the U.S. who provide humane care for stray and feral cats.`
         },
         {
-            id: 2,
+            // id: 2,
             name: 'Wildlife Rescue & Rehabilitation',
             category: 'animals',
             location: 'Kendalia, TX',
-            website: 'https://wildlife-rescue.org/',
+            url: 'https://wildlife-rescue.org/',
             mission: `To rescue, rehabilitate, and release native wildlife and to provide sanctuary, individualized care, 
                         and a voice for other animals in need.`
         },
         {
-            id: 3,
+            // id: 3,
             name: 'Israel Guide Dog Center for the Blind',
             category: 'animals',
             location: 'Warrington, PA',
-            website: 'https://israelguidedog.org/',
+            url: 'https://israelguidedog.org/',
             mission: `The Israel Guide Dog Center for the Blind began operations on January 1, 1991 with just one 
                         objective -- to help blind people in Israel to achieve independence and mobility through the use 
                         of guide dogs. The mission of the Israel Guide Dog Center for the Blind is to improve the quality 
@@ -48,11 +48,11 @@ const AnimalList = () => {
                         increases annually.`
         },
         {
-            id: 4,
+            // id: 4,
             name: 'American Eagle Foundation',
             category: 'animals',
             location: 'Pigeon Forge, TN',
-            website: 'https://www.eagles.org/',
+            url: 'https://www.eagles.org/',
             mission: `The American Eagle Foundation (AEF) is dedicated to protecting the majestic Bald Eagle, the USA's 
                         National Symbol, and its habitat by supporting and conducting eagle and environmental recovery 
                         and education programs. The AEF cares for a collection of about 80 non-releasable birds of 
@@ -60,20 +60,20 @@ const AnimalList = () => {
                         programs. Also, numerous orphaned and injured raptors are rescued, rehabilitated and released.`
         },
         {
-            id: 5,
+            // id: 5,
             name: 'Big Cat Rescue',
             category: 'animals',
             location: 'Tampa, FL',
-            website: 'https://bigcatrescue.org/',
+            url: 'https://bigcatrescue.org/',
             mission: `Our Mission is to provide the best home we can for the cats in our care, end abuse of big cats 
                         in captivity, and prevent extinction of big cats in the wild.`
         },
         {
-            id: 6,
+            // id: 6,
             name: 'The Elephant Sanctuary',
             category: 'animals',
             location: 'Hohenwald, TN',
-            website: 'https://www.elephants.com/',
+            url: 'https://www.elephants.com/',
             mission: `The Elephant Sanctuary in Tennessee, founded in 1995, is the nation's largest natural habitat 
                         refuge developed specifically for endangered African and Asian elephants. The Sanctuary 
                         operates on 2,700 acres in Hohenwald, Tennessee-85 miles southwest of Nashville. The Elephant 
@@ -84,20 +84,20 @@ const AnimalList = () => {
                         is not intended to provide entertainment, and it is therefore closed to the general public.`
         },
         {
-            id: 7,
+            // id: 7,
             name: 'Loggerhead Marinelife Center',
             category: 'animals',
             location: 'Juno Beach, FL',
-            website: 'https://marinelife.org/',
+            url: 'https://marinelife.org/',
             mission: `Loggerhead Marinelife Center (LMC) is a non-profit sea turtle hospital that promotes 
                         conservation of ocean ecosystems with a focus on threatened and endangered sea turtles.`
         },
         {
-            id: 8,
+            // id: 8,
             name: 'Monterey Bay Aquarium',
             category: 'animals',
             location: 'Monterey, CA',
-            website: 'https://www.montereybayaquarium.org/',
+            url: 'https://www.montereybayaquarium.org/',
             mission: `Opened in 1984, the Monterey Bay Aquarium's mission is to inspire conservation of the 
                         oceans. We know that bringing people face-to-face with living marine animals is a 
                         powerful way to move them to care about the oceans and ocean life. From the beginning, 
@@ -110,11 +110,11 @@ const AnimalList = () => {
                         visit us each year.`
         },
         {
-            id: 9,
+            // id: 9,
             name: 'The Living Desert',
             category: 'animals',
             location: 'Palm Desert, CA',
-            website: 'https://www.livingdesert.org/',
+            url: 'https://www.livingdesert.org/',
             mission: `The Living Desert was established in March 1970 as a 360 acre wilderness preserve. 
                         Today it is one of the most unique institutions in the country and stands out as 
                         the only American zoo and garden dedicated solely to interpreting and conserving 
@@ -125,11 +125,11 @@ const AnimalList = () => {
                         worldwide desert ecosystems.`
         },
         {
-            id: 10,
+            // id: 10,
             name: 'Wildlife Conservation Society',
             category: 'animals',
             location: 'Bronx, NY',
-            website: 'https://www.wcs.org/',
+            url: 'https://www.wcs.org/',
             mission: `The Wildlife Conservation Society (WCS), founded in 1895 saves wildlife and wild 
                         places worldwide. We do so through science, global conservation, education and 
                         the management of the world's largest system of urban wildlife parks, led by 
@@ -159,7 +159,7 @@ const AnimalList = () => {
                             <div className = "flex-row">
                                <img src={AnimalsLogo} className="miniLogo flex-row"/>
                             <h2 className="categoryName flex-row">
-                            <a href= {animal.website} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{animal.name}</a>
+                            <a href= {animal.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{animal.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{animal.location}</h4>
                             </div>

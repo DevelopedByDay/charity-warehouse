@@ -31,10 +31,10 @@ export const SAVE_CHARITY = gql`
         username
         email
         savedCharities {
-          charityId
-          charityName
-          description
-          link
+            id
+            name
+            mission
+            url
         }
     }
   }
@@ -47,10 +47,10 @@ export const REMOVE_CHARITY = gql`
         username
         email
         savedCharities {
-          charityId
-          charityName
-          description
-          link
+            id
+            name
+            mission
+            url
         }
     }
   }
