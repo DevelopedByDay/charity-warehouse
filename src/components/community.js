@@ -1,6 +1,7 @@
 
 
 import React, {useState} from 'react';
+import CommunityLogo from '../assets/Community.png';
 
 const CommDevList = () => {
 
@@ -147,16 +148,24 @@ const CommDevList = () => {
     ])
 
     return (
-        <section>
-            <h1>Community Development</h1>
-            <ul>
-                {comdevs.map((comdev) => (
-                    <li key = {comdev.name}>
-                        <span>
-                            {comdev.name}
-                            {comdev.location}
-                            {comdev.website}
-                            {comdev.mission}
+        <section className="my-5">
+            {/* <h1 id="">Animal Related Charities</h1> */}
+            <ul class="category">
+                {comdevs.map((community) => (
+                    <li className="my-2" key = {community.name}>
+                        {/* <div>{animal.logo}</div>
+                        <div>{AnimalsLogo}</div> */}
+                        
+                        <span className="test flex-row">
+                            <div className = "flex-row">
+                               <img src={CommunityLogo} className="miniLogo flex-row"/>
+                            <h2 className="categoryName flex-row">
+                            <a href= {community.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{community.name}</a>
+                            </h2>
+                            <h4 className="cityState flex-row">{community.location}</h4>
+                            </div>
+                            
+                            <p>{community.mission}</p>
                         </span>
                     </li>
                 ))}

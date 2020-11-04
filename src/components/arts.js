@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import 'antd/dist/antd.css';
+import ArtsLogo from '../assets/Arts.png';
 
 const ArtsList = () => {
 
@@ -9,7 +9,7 @@ const ArtsList = () => {
             name: 'The Actors Fund',
             category: 'arts & humanities',
             location: 'New York, NY',
-            url: `https://www.charitynavigator.org/index.cfm?bay=search.summary&orgid=5994`,
+            url: `https://actorsfund.org/`,
             mission: `The Actors Fund is a national human services organization that fosters stability and resiliency, and provides a safety net for performing arts and entertainment professionals over their lifespan. Through offices in New York, Los Angeles and Chicago, The Fund serves everyone in film, theater, television, music, opera, radio and dance with programs including social services and emergency financial assistance, health care and insurance counseling, housing, and secondary employment and training services.`
         },
 
@@ -88,16 +88,21 @@ const ArtsList = () => {
     ])
 
     return (
-        <section>
-            <h1>Arts and Humanities</h1>
-            <ul>
+        <section className="my-5">
+            {/* <h1>Arts and Humanities</h1> */}
+            <ul class="category">
                 {arts.map((arts) => (
-                    <li key = {arts.name}>
-                        <span>
-                            {arts.name}
-                            {arts.location}
-                            {arts.website}
-                            {arts.mission}
+                    <li className="my-2" key = {arts.name}>
+
+                        <span className="test flex-row">
+                            <div className = "flex-row">
+                                <img src={ArtsLogo} className="miniLogo flex-row"/>
+                            <h2 className="categoryName flex-row">
+                            <a href= {arts.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{arts.name}</a>
+                            </h2>
+                            <h4 className="cityState flex-row">{arts.location}</h4>
+                            </div>
+                            <p>{arts.mission}</p>
                         </span>
                     </li>
                 ))}

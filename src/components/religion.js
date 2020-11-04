@@ -1,6 +1,8 @@
 
 
 import React, {useState} from 'react';
+import religionsLogo from '../assets/religions.png';
+
 
 const ReligionList = () => {
     
@@ -157,21 +159,29 @@ const ReligionList = () => {
     ])
 
     return (
-        <section>
-        <h1>Religeous</h1>
-        <ul>
-            {religions.map((religion) => (
-                <li key = {religion.name}>
-                    <span>
-                        {religion.name}
-                        {religion.location}
-                        {religion.website}
-                        {religion.mission}
-                    </span>
-                </li>
-            ))}
-        </ul>
-    </section>
+        <section className="my-5">
+            {/* <h1 id="">Animal Related Charities</h1> */}
+            <ul class="category">
+                {religions.map((religions) => (
+                    <li className="my-2" key = {religions.name}>
+                        {/* <div>{animal.logo}</div>
+                        <div>{AnimalsLogo}</div> */}
+                        
+                        <span className="test flex-row">
+                            <div className = "flex-row">
+                               <img src={religionsLogo} className="miniLogo flex-row"/>
+                            <h2 className="categoryName flex-row">
+                            <a href= {religions.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{religions.name}</a>
+                            </h2>
+                            <h4 className="cityState flex-row">{religions.location}</h4>
+                            </div>
+                            
+                            <p>{religions.mission}</p>
+                        </span>
+                    </li>
+                ))}
+            </ul>
+        </section>
     )
 }
 
