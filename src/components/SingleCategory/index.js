@@ -7,6 +7,7 @@ import ReligionList from '../religion';
 import ArtsList from '../arts';
 import CivilRightsList from '../civil-rights';
 import EnvironmentalList from '../environmental';
+import AnimalsLogo from '../../assets/Animals.png';
 
 const SingleCategory = (category) => {
 console.log(category);
@@ -15,8 +16,14 @@ console.log(category);
         switch (category) {
             case 'animals':
                 return (
-                    <div>
+                    <div className="flex-row">
+                        <div className="flex-row">
+                            <img src={AnimalsLogo} className="categoryLogo flex-row"/>
+                            <h1 className="flex-row paddingAuto"> Animal Related Charities</h1>
+                        </div>
+                        
                         <AnimalList />
+                        
                     </div>);
                 
             case 'community':

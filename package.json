@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@apollo/react-hooks": "^4.0.0",
+    "antd": "^4.8.0",
     "apollo": "^2.31.0",
     "mongodb": "^3.6.2",
     "mongoose": "^5.10.11",

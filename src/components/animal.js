@@ -1,13 +1,14 @@
 
 
 import React, {useState} from 'react';
-
+import AnimalsLogo from '../assets/Animals.png';
 
 const AnimalList = () => {
 
     const [animals] = useState([
         {
             id: 1,
+            icon: AnimalsLogo,
             name: 'Alley Cat Allies',
             category: 'animals',
             location: 'Bethesda, MD',
@@ -146,16 +147,24 @@ const AnimalList = () => {
 
 
     return (
-        <section>
-            <h1>Animals</h1>
-            <ul>
+        <section className="my-5">
+            {/* <h1 id="">Animal Related Charities</h1> */}
+            <ul class="category">
                 {animals.map((animal) => (
-                    <li key = {animal.name}>
-                        <span>
-                            {animal.name}
-                            {animal.location}
-                            {animal.website}
-                            {animal.mission}
+                    <li className="my-2" key = {animal.name}>
+                        {/* <div>{animal.logo}</div>
+                        <div>{AnimalsLogo}</div> */}
+                        
+                        <span className="test flex-row">
+                            <div className = "flex-row">
+                               <img src={AnimalsLogo} className="miniLogo flex-row"/>
+                            <h2 className="categoryName flex-row">
+                            <a href= {animal.website} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{animal.name}</a>
+                            </h2>
+                            <h4 className="cityState flex-row">{animal.location}</h4>
+                            </div>
+                            
+                            <p>{animal.mission}</p>
                         </span>
                     </li>
                 ))}
