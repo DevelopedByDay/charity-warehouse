@@ -9,7 +9,7 @@ const CommDevList = () => {
             name: 'Association for Enterprise Opportunity',
             category: 'commdev',
             location: 'Washington, DC',
-            website: 'https://aeoworks.org/',
+            url: 'https://aeoworks.org/',
             mission: `Founded in 1991, Association for Enterprise Opportunity (AEO) is 
                         the only national membership association committed to microenterprise 
                         development as an effective economic development strategy and a powerful 
@@ -26,7 +26,7 @@ const CommDevList = () => {
             name: 'Asian Pacific Environmental Network',
             category: 'commdev',
             location: 'Oakland, CA',
-            website: 'http://apen4ej.org/',
+            url: 'http://apen4ej.org/',
             mission: `Founded in 1993, the Asian Pacific Environmental Network (APEN) seeks to 
                         empower low-income Asian Pacific Islander (API) communities to achieve 
                         environmental and social justice. APEN believes that the environment 
@@ -41,7 +41,7 @@ const CommDevList = () => {
             name: 'Building Goodness Foundation',
             category: 'commdev',
             location: 'Charlottesville, VA',
-            website: 'https://www.buildinggoodness.org/',
+            url: 'https://www.buildinggoodness.org/',
             mission: `Founded in 1999, Building Goodness Foundation (BGF) works to build community 
                         and improve lives. Their purpose is to bring together volunteers from every 
                         part of the construction industry to design and build structures for 
@@ -57,7 +57,7 @@ const CommDevList = () => {
             name: 'Catholic Charities',
             category: 'commdev',
             location: 'San Francisco, CA',
-            website: 'https://www.catholiccharitiessf.org/',
+            url: 'https://www.catholiccharitiessf.org/',
             mission: `Founded more than a century and a half ago to care for the orphans of the San 
                         Francisco earthquake, Catholic Charities is one of the largest, most 
                         comprehensive human services agencies in Northern California, reaching more 
@@ -67,7 +67,7 @@ const CommDevList = () => {
             name: 'Corporation for Supportive Housing',
             category: 'commdev',
             location: 'New York, NY',
-            website: 'https://www.csh.org/',
+            url: 'https://www.csh.org/',
             mission: `CSH's mission is to advance housing solutions that deliver three powerful 
                         outcomes: 1) improved lives for the most vulnerable people 2) maximized public 
                         resources and 3) strong, healthy communities across the country.`
@@ -76,7 +76,7 @@ const CommDevList = () => {
             name: 'DreamSpring',
             category: 'commdev',
             location: 'Albuquerque, NM',
-            website: 'https://www.dreamspring.org/',
+            url: 'https://www.dreamspring.org/',
             mission: `DreamSpring (formerly Accion serving Arizona, Colorado, Nevada, New Mexico and Texas) 
                         increases access to business credit, makes loans, and provides training which 
                         enable entrepreneurs to realize their dreams and be catalysts for positive economic 
@@ -93,7 +93,7 @@ const CommDevList = () => {
             name: 'Enterprise Community Partners, Inc.',
             category: 'commdev',
             location: 'Columbia, MD',
-            website: 'https://www.enterprisecommunity.org/',
+            url: 'https://www.enterprisecommunity.org/',
             mission: `Where we live matters: We make well-designed homes affordable and create communities 
                         with connections to opportunity so everyone can thrive. Enterprise is the only 
                         housing organization in the U.S. with the expertise to multiply the impact for 
@@ -107,7 +107,7 @@ const CommDevList = () => {
             name: 'Foundation for Financial Planning',
             category: 'commdev',
             location: 'Washington, DC',
-            website: 'https://ffpprobono.org/',
+            url: 'https://ffpprobono.org/',
             mission: `The Foundation for Financial Planning works to help people take control of their 
                         financial lives by connecting the financial planning community with people in 
                         need. We achieve this by supporting pro bono advice and outreach activities.`
@@ -116,7 +116,7 @@ const CommDevList = () => {
             name: 'Greenlight Fund',
             category: 'commdev',
             location: 'Boston, MA',
-            website: 'https://greenlightfund.org/',
+            url: 'https://greenlightfund.org/',
             mission: `The GreenLight Fund “greenlights” powerful programs that can help solve critical 
                         local needs, speeding their entry into the new location and giving them a 
                         strong start in the local community. With the help of a Selection Advisory 
@@ -134,7 +134,7 @@ const CommDevList = () => {
             name: 'Robin Hood Foundation',
             category: 'commdev',
             location: 'New York, NY',
-            website: 'https://www.robinhood.org/',
+            url: 'https://www.robinhood.org/',
             mission: `Since 1988, the Robin Hood Foundation has targeted poverty in New York City. 
                         By applying sound investment principles to philanthropy, we've helped the 
                         best programs save lives and change fates. Robin Hood's work comes in many 
@@ -155,7 +155,7 @@ const CommDevList = () => {
                         <span>
                             {comdev.name}
                             {comdev.location}
-                            {comdev.website}
+                            {comdev.url}
                             {comdev.mission}
                         </span>
                     </li>

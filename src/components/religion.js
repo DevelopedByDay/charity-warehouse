@@ -9,7 +9,7 @@ const ReligionList = () => {
             name: 'AMG International',
             category: 'religion',
             location: 'Chattanooga, TN',
-            website: 'https://amginternational.org/',
+            url: 'https://amginternational.org/',
             mission: `Founded in 1942, AMG (Advancing the Ministries of the Gospel) International 
                         is an evangelical mission and relief agency, working in approximately
                         50 countries of the world. Our mission is clear: to give each person at 
@@ -25,7 +25,7 @@ const ReligionList = () => {
             name: 'Audio Scripture Ministries',
             category: 'religion',
             location: 'Holland, MI',
-            website: 'https://audioscripture.org/',
+            url: 'https://audioscripture.org/',
             mission: `Audio Scripture Ministries (ASM) helps connect people to God's Word in audio. 
                         We do this by recording and distributing Scripture recordings and Bible 
                         engagement resources in hundreds of languages and countries worldwide. 
@@ -42,7 +42,7 @@ const ReligionList = () => {
             name: 'Crossroads Prison Ministries',
             category: 'religion',
             location: 'Grand Rapids, MI',
-            website: 'https://cpministries.org/',
+            url: 'https://cpministries.org/',
             mission: `Crossroad Bible Institute equips the church to disciple people in prison 
                         with the Word of God, free of charge, wherever they are incarcerated. 
                         Millions of incarcerated persons in North America and beyond are in 
@@ -57,7 +57,7 @@ const ReligionList = () => {
             name: 'The Family Radio Network, Inc.',
             category: 'religion',
             location: 'Appleton, WI',
-            website: 'https://www.thefamily.net/',
+            url: 'https://www.thefamily.net/',
             mission: `The Family is owned and operated by The Family Radio Network, Inc. a 
                         non-profit organization, founded in 1969. The Family's mission is 
                         to broadcast the hope of Jesus Christ to strengthen and encourage listeners.`
@@ -66,7 +66,7 @@ const ReligionList = () => {
             name: 'Far East Broadcasting Company',
             category: 'religion',
             location: 'La Miranda, CA',
-            website: 'https://www.febc.org/',
+            url: 'https://www.febc.org/',
             mission: `Founded in 1945, Far East Broadcasting Company (FEBC) is a non-denominational, 
                         international Christian radio network that broadcasts the Good News in more 
                         than 150 languages from 32 transmitters located throughout the world. 
@@ -81,7 +81,7 @@ const ReligionList = () => {
             name: 'Foundation for Jewish Camp',
             category: 'religion',
             location: 'New York, NY',
-            website: 'https://jewishcamp.org/',
+            url: 'https://jewishcamp.org/',
             mission: `Founded in 1997, Foundation for Jewish Camp aims to build a strong Jewish 
                         future through transformative Jewish summers. The key to the Jewish 
                         future is Jewish camp. We know from research—and nearly two decades' 
@@ -98,7 +98,7 @@ const ReligionList = () => {
             name: 'Hope International',
             category: 'religion',
             location: 'Lancaster, PA',
-            website: 'https://www.hopeinternational.org/',
+            url: 'https://www.hopeinternational.org/',
             mission: `Founded in 1997, HOPE International (HOPE) is a Christian faith-based 
                         non-profit organization focused on alleviating physical and spiritual 
                         poverty through microenterprise development. HOPE believes that microfinance 
@@ -114,7 +114,7 @@ const ReligionList = () => {
             name: 'Youth for Christ International',
             category: 'religion',
             location: 'Englewood, CO',
-            website: 'https://yfci.org/',
+            url: 'https://yfci.org/',
             mission: `Founded in 1944, Youth for Christ (YFC) is a worldwide Christian movement 
                         working with young people around the globe. Motivated by their faith in 
                         Jesus Christ they share the good news of God with young people. Youth for 
@@ -128,7 +128,7 @@ const ReligionList = () => {
             name: 'Moms in Prayer International',
             category: 'religion',
             location: 'Poway, CA',
-            website: 'https://momsinprayer.org/',
+            url: 'https://momsinprayer.org/',
             mission: `Moms in Prayer International impacts children and schools worldwide for Christ by 
                         gathering mothers to pray. We desire to be a supportive partner, building up the 
                         Body of Christ through prayer. We teach women how to pray corporately by using four 
@@ -142,7 +142,7 @@ const ReligionList = () => {
             name: 'Proverbs 31 Ministries',
             category: 'religion',
             location: 'Matthews, NC',
-            website: 'https://proverbs31.org/',
+            url: 'https://proverbs31.org/',
             mission: `Proverbs 31 Ministries is a non-denominational, non-profit Christian ministry that seeks 
                         to lead women into a personal relationship with Christ. With Proverbs 31:10-31 as a 
                         guide, Proverbs 31 Ministries reaches women in the middle of their busy days through 
@@ -165,7 +165,7 @@ const ReligionList = () => {
                     <span>
                         {religion.name}
                         {religion.location}
-                        {religion.website}
+                        {religion.url}
                         {religion.mission}
                     </span>
                 </li>
