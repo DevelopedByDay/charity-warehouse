@@ -8,6 +8,7 @@ import ArtsList from '../arts';
 import CivilRightsList from '../civil-rights';
 import EnvironmentalList from '../environmental';
 import AnimalsLogo from '../../assets/Animals.png';
+import Hero from '../Hero/index';
 
 const SingleCategory = (category) => {
 console.log(category);
@@ -62,7 +63,11 @@ console.log(category);
                 );
                 
             default:
-                break;
+                return (
+                    <div>
+                        <Hero />
+                    </div>
+                );
     }
 }
 

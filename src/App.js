@@ -59,7 +59,7 @@ function App() {
       ></Nav>
       <main>   
         <SingleCategory currentCategory = {currentCategory}></SingleCategory>
-        <Hero></Hero>
+        
       </main>
       <footer>
        <Footer></Footer> 
