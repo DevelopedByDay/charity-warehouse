@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import civilRightsLogo from '../assets/Civil-Liberties.png';
+import {FaHeart} from 'react-icons/fa';
 
 const CivilRightsList = () => {
 
@@ -102,6 +103,10 @@ const CivilRightsList = () => {
                             <a href= {civilRights.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{civilRights.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{civilRights.location}</h4>
+                            <div className = 'flex-row'>
+                                    <button className = 'donate-btn' type = 'submit'>Donate</button>
+                                    <button className = 'fave-btn' type = 'submit'><FaHeart /></button>
+                                </div>
                             </div>
                             
                             <p>{civilRights.mission}</p>

@@ -2,6 +2,7 @@
 
 import React, {useState} from 'react';
 import CommunityLogo from '../assets/Community.png';
+import {FaHeart} from 'react-icons/fa';
 
 const CommDevList = () => {
 
@@ -163,6 +164,10 @@ const CommDevList = () => {
                             <a href= {community.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{community.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{community.location}</h4>
+                            <div className = 'flex-row'>
+                                    <button className = 'donate-btn' type = 'submit'>Donate</button>
+                                    <button className = 'fave-btn' type = 'submit'><FaHeart /></button>
+                                </div>
                             </div>
                             
                             <p>{community.mission}</p>

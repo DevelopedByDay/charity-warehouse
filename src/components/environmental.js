@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import EnvLogo from '../assets/Environmental.png';
+import {FaHeart} from 'react-icons/fa';
+
 
 
 const EnvironmentalList = () => {
@@ -103,6 +105,10 @@ const EnvironmentalList = () => {
                             <a href= {env.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{env.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{env.location}</h4>
+                            <div className = 'flex-row'>
+                                    <button className = 'donate-btn' type = 'submit'>Donate</button>
+                                    <button className = 'fave-btn' type = 'submit'><FaHeart /></button>
+                                </div>
                             </div>
                             
                             <p>{env.mission}</p>
