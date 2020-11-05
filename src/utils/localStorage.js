@@ -23,7 +23,7 @@ export const getSavedCharityIds = () => {
       return false;
     }
   
-    const updatedSavedCharityIds = savedCharityIds?.filter((savedCharityId) => savedCharityId !== CharityId);
+    const updatedSavedCharityIds = savedCharityIds?.filter((savedCharityId) => savedCharityId !== charityId);
     localStorage.setItem('saved_charities', JSON.stringify(updatedSavedCharityIds));
   
     return true;
