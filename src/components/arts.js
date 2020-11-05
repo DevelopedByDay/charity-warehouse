@@ -99,7 +99,7 @@ const ArtsList = () => {
                             <div className = "flex-row">
                                 <img src={ArtsLogo} className="charLogo  flex-row"/>
                             <h2 className="categoryName flex-row">
-                            <a href= {arts.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{arts.name}</a>
+                            <a href= {arts.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank" rel = 'noreferrer'>{arts.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{arts.location}</h4>
                             <div className = 'flex-row'>
