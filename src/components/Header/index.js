@@ -16,16 +16,18 @@ const Header = () => {
             <h2 className="flex-row px-1">
                 <a data-testid="link" href = '/'><div className = "logo flex-row"><img src={logo}/></div></a>
                 <p className="motto flex-row">Intelligent philanthropy.</p>
-                <Link onClick={() => setShowModal(true)}>Login/Sign Up</Link>
-                <Link onClick={Auth.logout}>Logout</Link>
+                <button className="">Login/Sign Up!</button>
+                <button className="">Logout</button>
+                {/* <Link onClick={() => setShowModal(true)}>Login/Sign Up</Link>
+                <Link onClick={Auth.logout}>Logout</Link> */}
             </h2>
-            <Modal
+            {/* <Modal
         size='lg'
         show={showModal}
         onHide={() => setShowModal(false)}
-        aria-labelledby='signup-modal'>
+        aria-labelledby='signup-modal'> */}
         {/* tab container to do either signup or login component */}
-        <Tab.Container defaultActiveKey='login'>
+        {/* <Tab.Container defaultActiveKey='login'>
           <Modal.Header closeButton>
             <Modal.Title id='signup-modal'>
               <Nav variant='pills'>
@@ -49,7 +51,7 @@ const Header = () => {
             </Tab.Content>
           </Modal.Body>
         </Tab.Container>
-      </Modal>
+      </Modal> */}
     </header>
     
 )
