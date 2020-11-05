@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 // import {capitalizeFirstLetter} from '../../utils';
 import logo from '../../assets/cover/giving-logo.png';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import SignUpForm from './SignupForm';
 import LoginForm from './LoginForm';
 import Auth from '../../utils/auth';
-import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
+import {Nav, Modal, Tab } from 'react-bootstrap';
 // import logo from '../../assets/hero.jpg';
 
 const Header = () => {
@@ -14,10 +14,10 @@ const Header = () => {
     
     <header className="flex-row px-1">
             <h2 className="flex-row px-1">
-                <a data-testid="link" href = '/'><div className = "logo flex-row"><img src={logo}/></div></a>
+                <a data-testid="link" href = '/'><div className = "logo flex-row"><img src={logo} alt = 'logo'/></div></a>
                 <p className="motto flex-row">Intelligent philanthropy.</p>
-                <Link onClick={() => setShowModal(true)}>Login/Sign Up</Link>
-                <Link onClick={Auth.logout}>Logout</Link>
+                {/* <Link onClick={() => setShowModal(true)}>Login/Sign Up</Link>
+                <Link onClick={Auth.logout}>Logout</Link> */}
             </h2>
             <Modal
         size='lg'

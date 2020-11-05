@@ -1,5 +1,4 @@
 import React from 'react';
-import {capitalizeFirstLetter} from '../../utils/helpers';
 import logo from '../../assets/hero.jpg';
 
 function Hero() {

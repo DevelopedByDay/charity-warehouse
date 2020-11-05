@@ -1,9 +1,7 @@
 //this is a nav component
 import React from 'react';
 import {capitalizeFirstLetter} from '../../utils/helpers';
-import AnimalList from '../animal';
 
-import AnimalsLogo from '../../assets/Animals.png';
 
 function Nav(props) {
 
@@ -22,8 +20,8 @@ function Nav(props) {
                         <li className = {`nav ${currentCategory.name === category.name}`}
                             key = {category.name}>
                             <span className = {``} onClick = {() => {setCurrentCategory(category)}}>
-                            <a data-testid="link" href = '/'></a>
-                            {<img src={category.icon} className = "miniLogo"/>}
+                            <a data-testid="link" href = '/' ></a>
+                            {<img src={category.icon} className = "miniLogo" alt = 'logo'/>}
                             {capitalizeFirstLetter(category.name)}
                             </span>
                             
