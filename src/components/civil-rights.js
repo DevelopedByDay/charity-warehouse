@@ -98,7 +98,7 @@ const CivilRightsList = () => {
 
                         <span className="test flex-row">
                             <div className = "flex-row">
-                               <img src={civilRightsLogo} className="miniLogo flex-row"/>
+                               <img src={civilRightsLogo} className="charLogo  flex-row"/>
                             <h2 className="categoryName flex-row">
                             <a href= {civilRights.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{civilRights.name}</a>
                             </h2>

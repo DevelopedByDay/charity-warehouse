@@ -12,9 +12,9 @@ const Header = () => {
     const [showModal, setShowModal] = useState(false);
     return (
     
-    <header className="flex-row px-1">
-            <h2 className="flex-row px-1">
-                <a data-testid="link" href = '/'><div className = "logo flex-row"><img src={logo}/></div></a>
+    <header className="flex-row px-1 ">
+            <h2 className="flex-row px-1 center">
+                <a className = "" data-testid="link" href = '/'><div className = "logo flex-row"><img src={logo}/></div></a>
                 <p className="motto flex-row">Intelligent philanthropy.</p>
                 <Link onClick={() => setShowModal(true)}>Login/Sign Up</Link>
                 <Link onClick={Auth.logout}>Logout</Link>

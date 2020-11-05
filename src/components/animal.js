@@ -158,7 +158,7 @@ const AnimalList = () => {
                         
                         <span className="test flex-row">
                             <div className = "flex-row">
-                               <img src={AnimalsLogo} className="miniLogo flex-row"/>
+                               <img src={AnimalsLogo} className="charLogo flex-row"/>
                             <h2 className="categoryName flex-row">
                             <a href= {animal.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{animal.name}</a>
                             </h2>

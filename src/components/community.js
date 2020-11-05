@@ -159,7 +159,7 @@ const CommDevList = () => {
                         
                         <span className="test flex-row">
                             <div className = "flex-row">
-                               <img src={CommunityLogo} className="miniLogo flex-row"/>
+                               <img src={CommunityLogo} className="charLogo  flex-row"/>
                             <h2 className="categoryName flex-row">
                             <a href= {community.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{community.name}</a>
                             </h2>
