@@ -6,9 +6,9 @@ import logo from '../../assets/cover/giving-logo.png';
 function Header() {
     return (
     
-    <header className="flex-row px-1">
-            <h2 className="flex-row px-1">
-                <a data-testid="link" href = '/'><div className = "logo flex-row"><img src={logo}/></div></a>
+    <header className="flex-row px-1 ">
+            <h2 className="flex-row px-1 center">
+                <a className = "" data-testid="link" href = '/'><div className = "logo flex-row"><img src={logo}/></div></a>
                 <p className="motto flex-row">Intelligent philanthropy.</p>
             </h2>
     </header>

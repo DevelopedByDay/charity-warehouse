@@ -169,7 +169,7 @@ const ReligionList = () => {
                         
                         <span className="test flex-row">
                             <div className = "flex-row">
-                               <img src={religionsLogo} className="miniLogo flex-row"/>
+                               <img src={religionsLogo} className="charLogo  flex-row"/>
                             <h2 className="categoryName flex-row">
                             <a href= {religions.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{religions.name}</a>
                             </h2>

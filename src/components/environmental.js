@@ -98,7 +98,7 @@ const EnvironmentalList = () => {
                         
                         <span className="test flex-row">
                             <div className = "flex-row">
-                               <img src={EnvLogo} className="miniLogo flex-row"/>
+                               <img src={EnvLogo} className="charLogo  flex-row"/>
                             <h2 className="categoryName flex-row">
                             <a href= {env.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{env.name}</a>
                             </h2>

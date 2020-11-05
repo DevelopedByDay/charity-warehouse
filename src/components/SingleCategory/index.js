@@ -24,8 +24,8 @@ console.log(category);
                 return (
                     <div className="flex-row">
                         <div className="flex-row">
-                            <img src={AnimalsLogo} className="categoryLogo flex-row"/>
-                            <h1 className="flex-row paddingAuto"> Animal Related Charities</h1>
+                            <img src={AnimalsLogo} className="categoryLogo"/>
+                            <h1 className="paddingAuto"> Animal Related Charities</h1>
                         </div>
                         
                         <AnimalList />
