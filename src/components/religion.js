@@ -2,6 +2,7 @@
 
 import React, {useState} from 'react';
 import religionsLogo from '../assets/religions.png';
+import {FaHeart} from 'react-icons/fa';
 
 
 const ReligionList = () => {
@@ -174,6 +175,10 @@ const ReligionList = () => {
                             <a href= {religions.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{religions.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{religions.location}</h4>
+                            <div className = 'flex-row'>
+                                    <button className = 'donate-btn' type = 'submit'>Donate</button>
+                                    <button className = 'fave-btn' type = 'submit'><FaHeart /></button>
+                                </div>
                             </div>
                             
                             <p>{religions.mission}</p>

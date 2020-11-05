@@ -2,6 +2,7 @@
 
 import React, {useState} from 'react';
 import AnimalsLogo from '../assets/Animals.png';
+import {FaHeart} from 'react-icons/fa';
 
 const AnimalList = () => {
 
@@ -162,8 +163,12 @@ const AnimalList = () => {
                             <a href= {animal.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{animal.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{animal.location}</h4>
-                            </div>
                             
+                                <div className = 'flex-row'>
+                                    <button className = 'donate-btn' type = 'submit'>Donate</button>
+                                    <button className = 'fave-btn' type = 'submit'><FaHeart /></button>
+                                </div>
+                            </div>
                             <p>{animal.mission}</p>
                         </span>
                     </li>
