@@ -97,13 +97,12 @@ li {
     align-items: center;
 }
 
-span.categoriesIcon {
+/* span.categoriesIcon {
   /* display: inline-flex;
   width: 50%;
   margin: 1%; 
   flex-wrap: wrap; */
  
-}
 
 .center {
     text-align: center;
