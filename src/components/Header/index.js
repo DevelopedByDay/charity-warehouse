@@ -16,7 +16,7 @@ const Header = () => {
             <h2 className="flex-row px-1 center">
                 <a data-testid="link" href = '/'><div className = "logo flex-row"><img src={logo} alt = 'logo'/></div></a>
                 <p className="motto flex-row">Intelligent philanthropy.</p>
-                <button className="header-button">Sign In!</button>
+                <button className="header-button">Sign Out</button>
                 <button className="header-button">Login/Sign Up!</button>
                 {/* <Link onClick={() => setShowModal(true)}>Login/Sign Up</Link>
                 <Link onClick={Auth.logout}>Logout</Link> */}
