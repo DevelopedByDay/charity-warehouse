@@ -8,12 +8,28 @@ import CivilLibertiesLogo from '../src/assets/Civil-Liberties.png';
 import CommunityLogo from '../src/assets/Community.png';
 import EnvironmentalLogo from '../src/assets/Environmental.png';
 import ReligionsLogo from '../src/assets/religions.png';
-//import the style
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
-
-
+import {ApolloProvider} from '@apollo/react-hooks';
+import ApolloClient from 'apollo-boost';
 import SingleCategory from './components/SingleCategory';
+import Login from '../src/pages/Login';
+import Signup from '../src/pages/Signup';
+import Profile from '../src/pages/Profile';
 
+
+const client = new ApolloClient({
+  request: operation => {
+    const token = localStorage.getItem('id_token');
+
+    operation.setContext({
+      headers: {
+        authorization: token ? `Bearer ${token}` : ''
+      }
+    });
+  },
+  uri: '/graphql'
+});
 
 function App() {
 
@@ -49,22 +65,32 @@ function App() {
   
 
   return (
-    <div>
-      <Header></Header>
-      <Nav
-      categories = {categories}
-      setCurrentCategory = {setCurrentCategory}
-      currentCategory = {currentCategory}
-      ></Nav>
-      <main>   
-        <SingleCategory currentCategory = {currentCategory}></SingleCategory>
+    <ApolloProvider client = {client}>
+      <Router>
+      <div>
+        <Header></Header>
+        <Nav
+        categories = {categories}
+        setCurrentCategory = {setCurrentCategory}
+        currentCategory = {currentCategory}
+        ></Nav>
+        <main>   
+          <SingleCategory currentCategory = {currentCategory}></SingleCategory>
+        </main>
         
-      </main>
-      <footer>
-       <Footer></Footer> 
-      </footer>
-      
+        <div>
+          <Route exact path = '/login' component = {Login} />
+          <Route exact path = '/signup' component = {Signup} />
+          <Route exact path = '/profile/:username?' component = {Profile} />
+        </div>
+        
+        <footer>
+        <Footer></Footer> 
+        </footer>
+        
     </div>
+    </Router>
+  </ApolloProvider>
   );
 }
 

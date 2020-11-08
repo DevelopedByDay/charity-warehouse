@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import logo from '../../assets/cover/giving-logo.png';
 
 function Footer() {
     return (
@@ -13,7 +12,7 @@ function Footer() {
                     <a class="social-button instagram" href="https://www.instagram.com/" target="_blank" rel = 'noreferrer'><i class="fab fa-instagram"></i></a>
         </div>
         <div>
-          giVing ©2020 Created by project-pba
+          giVing ©2020 Created by project-ptba
         </div>
     </footer>
     )

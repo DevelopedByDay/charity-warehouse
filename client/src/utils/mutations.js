@@ -24,9 +24,9 @@ export const ADD_USER = gql`
   }
 `;
 
-export const SAVE_CHARITY = gql`
-  mutation saveCharity($charityData: CharityInput!) {
-    saveCharity(charityData: $charityData) {
+export const ADD_CHARITY = gql`
+  mutation addCharity($id: ID!) {
+    addCharity(charityId: $id) {
         _id
         username
         email
@@ -35,6 +35,8 @@ export const SAVE_CHARITY = gql`
             name
             mission
             url
+            location
+            category
         }
     }
   }
