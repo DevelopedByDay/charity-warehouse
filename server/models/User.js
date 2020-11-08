@@ -1,9 +1,7 @@
 const { Schema, model } = require('mongoose');
+const Charity = require('./Charity');
 const bcrypt = require('bcrypt');
 
-// import schema from Charities
-const bookSchema = require('./Charities.js');
-const charitySchema = require('./Charities.js');
 
 const userSchema = new Schema(
   {
@@ -11,6 +9,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
       unique: true,
+      trim: true
     },
     email: {
       type: String,
@@ -23,7 +22,12 @@ const userSchema = new Schema(
       required: true,
     },
     // set savedBooks to be an array of data that adheres to the charitySchema
-    savedCharities: [charitySchema],
+    savedCharities: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Charity'
+      }
+    ]
   },
   // set this to use virtual below
   {

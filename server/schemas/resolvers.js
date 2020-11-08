@@ -1,18 +1,25 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Charity } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
       if (context.user) {
-        const userData = await User.findOne({ _id: context.user._id }).select('-__v -password');
+        const userData = await User.findOne({ _id: context.user._id })
+        .select('-__v -password')
+        .populate('savedCharities');
 
         return userData;
       }
 
       throw new AuthenticationError('Not logged in');
     },
+
+    charities: async (parent, {name}) => {
+      const params = name ? {name} : {};
+      return Charity.find(params);
+    }
   },
 
   Mutation: {
@@ -22,6 +29,7 @@ const resolvers = {
 
       return { token, user };
     },
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -38,32 +46,34 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    saveCharity: async (parent, { charityData }, context) => {
+    addCharity: async (parent, {charityId}, context) => {
+      console.log('something');
         if (context.user) {
-            const updatedUser = await User.findByIdAndUpdate(
+            const updatedUser = await User.findOneAndUpdate(
                 { _id: context.user._id },
-                { $push: { savedCharity: charityData } },
+                { $addToSet: { savedCharities: charityId } },
                 { new: true }
-            );
-            return updatedUser
-        }
+            ).populate('savedCharities');
 
+            return updatedUser;
+        }
+        
         throw new AuthenticationError('Login required!');
-    },
+    }
 
-    removeCharity: async (parent, { charityData }, context) => {
-        if (context.user) {
-          const updatedUser = await User.findOneAndUpdate(
-            { _id: context.user._id },
-            { $pull: { savedCharity: { charityData } } },
-            { new: true }
-          );
+    // removeCharity: async (parent, { charityId }, context) => {
+    //     if (context.user) {
+    //       const updatedUser = await User.findOneAndUpdate(
+    //         { _id: context.user._id },
+    //         { $pull: { savedCharities: charityId } },
+    //         { new: true }
+    //       );
   
-          return updatedUser;
-        }
+    //       return updatedUser;
+    //     }
   
-        throw new AuthenticationError('You need to be logged in!');
-      },
+    //     throw new AuthenticationError('You need to be logged in!');
+    //   },
   }
 }
 

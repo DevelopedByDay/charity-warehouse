@@ -1,37 +1,40 @@
-const { gql } = require('apollo-server-express');
+
+
+// import the gql tagged template function
+const {gql} = require('apollo-server-express');
 
 const typeDefs = gql`
-  type User {
-    _id: ID!
-    username: String!
-    email: String
-    charityCount: Int
-    savedCharities: [Charity]
-  }
+    type Charity {
+        _id: ID
+        name: String
+        category: String
+        location: String
+        url: String
+        mission: String
+    }
 
-  type Charity {
-    charityId: ID!
-    mission: String
-    url: String
-    location: String!
-    category: String
-  }
+    type User {
+        _id: ID
+        username: String
+        email: String
+        savedCharities: [Charity]
+    }
 
-  type Auth {
-    token: ID!
-    user: User
-  }
+    type Auth {
+        token: ID!
+        user: User
+    }
 
-  type Query {
-    me: User
-  }
+    type Query {
+        me: User
+        charities(name: String): [Charity]
+    }
 
-  type Mutation {
-    login(email: String!, password: String!): Auth
-    addUser(username: String!, email: String!, password: String!): Auth
-    saveCharity(charityData: CharityInput!): User
-    removeCharity(charityId: ID!): User
-  }
+    type Mutation {
+        login(email: String!, password: String!,): Auth
+        addUser(username: String!, email: String!, password: String!): Auth
+        addCharity(charityId: ID!): User
+    }
 `;
 
 module.exports = typeDefs;
