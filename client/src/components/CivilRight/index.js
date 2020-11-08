@@ -14,6 +14,8 @@ const CivilRightsList = (charity) => {
 
     const [addCharity] = useMutation(ADD_CHARITY);
 
+    const civilRights = charities.filter((civRight) => civRight.category === 'civil-rights');  
+
     const handleClick = async () => {
         try {
             await addCharity({
@@ -29,23 +31,23 @@ const CivilRightsList = (charity) => {
         <section className="my-5">
             {/* <h1>Civil Rights</h1> */}
             <ul class="category">
-                {charities.map((civilRights) => (
-                    <li className="my-2" key = {civilRights.name}>
+                {civilRights.map((civilRight) => (
+                    <li className="my-2" key = {civilRight.name}>
 
                         <span className="test flex-row">
                             <div className = "flex-row">
                                <img src={civilRightsLogo} className="charLogo  flex-row"/>
                             <h2 className="categoryName flex-row">
-                            <a href= {civilRights.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank" rel = 'noreferrer'>{civilRights.name}</a>
+                            <a href= {civilRight.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank" rel = 'noreferrer'>{civilRight.name}</a>
                             </h2>
-                            <h4 className="cityState flex-row">{civilRights.location}</h4>
+                            <h4 className="cityState flex-row">{civilRight.location}</h4>
                             <div className = 'flex-row'>
                                     <button className = 'donate-btn' type = 'submit'>Donate</button>
                                     <button className = 'fave-btn' onClick = {handleClick}><FaHeart /></button>
                                 </div>
                             </div>
                             
-                            <p>{civilRights.mission}</p>
+                            <p>{civilRight.mission}</p>
                         </span>
                     </li>
                 ))}

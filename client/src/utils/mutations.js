@@ -31,7 +31,7 @@ export const ADD_CHARITY = gql`
         username
         email
         savedCharities {
-            id
+            _id
             name
             mission
             url

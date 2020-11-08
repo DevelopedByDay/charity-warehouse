@@ -22,7 +22,8 @@ import ArtsList from '../Arts';
 const SingleCategory = (charity) => {
     const {loading, data} = useQuery(QUERY_CHARITIES);
     const charities = data?.charities || [];
-    console.log(charities);
+    console.log(charity.currentCategory);
+    console.log(charity);
 
     const selectedCategory = (charity) => {
         switch (charity) {
@@ -112,7 +113,9 @@ const SingleCategory = (charity) => {
                         <Hero />
                     </div>
                 );
+                
     }
+    
 }
 
     return (

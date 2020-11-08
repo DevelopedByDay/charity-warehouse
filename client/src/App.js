@@ -39,7 +39,8 @@ function App() {
       icon: AnimalsLogo,
     },
 
-    { name: 'arts',
+    { 
+      name: 'arts',
       icon: ArtsLogo,
     },
 

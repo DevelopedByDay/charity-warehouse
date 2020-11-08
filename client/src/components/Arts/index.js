@@ -14,6 +14,8 @@ const ArtsList = (charity) => {
 
     const [addCharity] = useMutation(ADD_CHARITY);
 
+    const arts = charities.filter((art) => art.category === 'arts');  
+
     const handleClick = async () => {
         try {
             await addCharity({
@@ -28,22 +30,22 @@ const ArtsList = (charity) => {
         <section className="my-5">
            
             <ul class="category">
-                {charities.map((arts) => (
+                {arts.map((art) => (
                     <li className="my-2" key = {arts.name}>
 
                         <span className="test flex-row">
                             <div className = "flex-row">
                                 <img src={ArtsLogo} className="charLogo  flex-row"/>
                             <h2 className="categoryName flex-row">
-                            <a href= {arts.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank" rel = 'noreferrer'>{arts.name}</a>
+                            <a href= {art.url} onClick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank" rel = 'noreferrer'>{art.name}</a>
                             </h2>
-                            <h4 className="cityState flex-row">{arts.location}</h4>
+                            <h4 className="cityState flex-row">{art.location}</h4>
                             <div className = 'flex-row'>
                                     <button className = 'donate-btn' type = 'submit'>Donate</button>
                                     <button className = 'fave-btn' onClick = {handleClick}><FaHeart /></button>
                                 </div>
                             </div>
-                            <p>{arts.mission}</p>
+                            <p>{art.mission}</p>
                         </span>
                     </li>
                 ))}

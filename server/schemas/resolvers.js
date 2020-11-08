@@ -47,6 +47,7 @@ const resolvers = {
       return { token, user };
     },
     addCharity: async (parent, {charityId}, context) => {
+      console.log('something');
         if (context.user) {
             const updatedUser = await User.findOneAndUpdate(
                 { _id: context.user._id },
@@ -56,7 +57,7 @@ const resolvers = {
 
             return updatedUser;
         }
-
+        
         throw new AuthenticationError('Login required!');
     }
 

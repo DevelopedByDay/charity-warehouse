@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const Charity = require('./Charity');
 const bcrypt = require('bcrypt');
 
 
@@ -24,7 +25,7 @@ const userSchema = new Schema(
     savedCharities: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Charities'
+        ref: 'Charity'
       }
     ]
   },

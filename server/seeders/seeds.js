@@ -1,12 +1,16 @@
 
 
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/charityWarehouse', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: true,
-});
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/charityWarehouse', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   useCreateIndex: true,
+//   useFindAndModify: true,
+// });
+
+const db = require('../config/connection');
+
+db.dropCollection("charities");
 
 const Charity = require('../models/Charity');
 
@@ -701,6 +705,9 @@ const charities = [
 ];
 
 let done = 0;
+
+const charityCollection = new Charity()
+charityCollection.remove({});
 
 for (let i = 0; i < charities.length; i++) {
     charities[i].save(function(err, result) {
