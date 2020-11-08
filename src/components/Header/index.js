@@ -7,6 +7,8 @@ import LoginForm from './LoginForm';
 import Auth from '../../utils/auth';
 import {Nav, Modal, Tab } from 'react-bootstrap';
 // import logo from '../../assets/hero.jpg';
+import { Login } from '../../utils/login';
+import { Logout } from '../../utils/logout';
 
 const Header = () => {
     const [showModal, setShowModal] = useState(false);
@@ -16,8 +18,8 @@ const Header = () => {
             <h2 className="flex-row px-1 center">
                 <a data-testid="link" href = '/'><div className = "logo flex-row"><img src={logo} alt = 'logo'/></div></a>
                 <p className="motto flex-row">Intelligent philanthropy.</p>
-                <button className="header-button">Sign Out</button>
-                <button className="header-button">Login/Sign Up!</button>
+                <button className="header-button" id="logout" onClick="${Logout}">Sign Out</button>
+                <button className="header-button" id="login" onClick="${Login}">Login/Sign Up!</button>
                 {/* <Link onClick={() => setShowModal(true)}>Login/Sign Up</Link>
                 <Link onClick={Auth.logout}>Logout</Link> */}
             </h2>
