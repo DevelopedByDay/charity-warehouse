@@ -28,6 +28,7 @@ const AnimalList = (charity) => {
             await addCharity({
                 variables: {id: charities._id}
             });
+            console.log('saved');
         } catch (e) {
             console.error(e);
         }
