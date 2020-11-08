@@ -16,8 +16,8 @@ const resolvers = {
       throw new AuthenticationError('Not logged in');
     },
 
-    charities: async (parent, {category}) => {
-      const params = category ? {category} : {};
+    charities: async (parent, {name}) => {
+      const params = name ? {name} : {};
       return Charity.find(params);
     }
   },
@@ -46,7 +46,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    saveCharity: async (parent, {charityId}, context) => {
+    addCharity: async (parent, {charityId}, context) => {
         if (context.user) {
             const updatedUser = await User.findOneAndUpdate(
                 { _id: context.user._id },
@@ -58,21 +58,21 @@ const resolvers = {
         }
 
         throw new AuthenticationError('Login required!');
-    },
+    }
 
-    removeCharity: async (parent, { charityId }, context) => {
-        if (context.user) {
-          const updatedUser = await User.findOneAndUpdate(
-            { _id: context.user._id },
-            { $pull: { savedCharities: charityId } },
-            { new: true }
-          );
+    // removeCharity: async (parent, { charityId }, context) => {
+    //     if (context.user) {
+    //       const updatedUser = await User.findOneAndUpdate(
+    //         { _id: context.user._id },
+    //         { $pull: { savedCharities: charityId } },
+    //         { new: true }
+    //       );
   
-          return updatedUser;
-        }
+    //       return updatedUser;
+    //     }
   
-        throw new AuthenticationError('You need to be logged in!');
-      },
+    //     throw new AuthenticationError('You need to be logged in!');
+    //   },
   }
 }
 
