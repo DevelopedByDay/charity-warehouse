@@ -17,11 +17,14 @@ const ReligionList = (charity) => {
 
     const [addCharity] = useMutation(ADD_CHARITY);
 
-    const handleClick = async () => {
+    const religions = charities.filter((religion) => religion.category === 'religion');
+    console.log(religions);
+    const handleClick = async (id) => {
         try {
-            await addCharity({
-                variables: {id: charities._id}
+            const updatedUser = await addCharity({
+                variables: {id: id}
             });
+            console.log(updatedUser);
         } catch (e) {
             console.error(e);
         }
@@ -32,25 +35,23 @@ const ReligionList = (charity) => {
         <section className="my-5">
             {/* <h1 id="">Animal Related Charities</h1> */}
             <ul class="category">
-                {charities.map((religions) => (
-                    <li className="my-2" key = {religions.name}>
-                        {/* <div>{animal.logo}</div>
-                        <div>{AnimalsLogo}</div> */}
+                {religions.map((religion) => (
+                    <li className="my-2" key = {religion._id}>
                         
                         <span className="test flex-row">
                             <div className = "flex-row">
                                <img src={religionsLogo} className="charLogo  flex-row"/>
                             <h2 className="categoryName flex-row">
-                            <a href= {religions.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank" rel = 'noreferrer'>{religions.name}</a>
+                            <a href= {religions.url} key = {religion._id} target="_blank" rel = 'noreferrer'>{religion.name}</a>
                             </h2>
-                            <h4 className="cityState flex-row">{religions.location}</h4>
+                            <h4 className="cityState flex-row">{religion.location}</h4>
                             <div className = 'flex-row'>
                                     <button className = 'donate-btn' type = 'submit'>Donate</button>
-                                    <button className = 'fave-btn' onClick = {handleClick}><FaHeart /></button>
+                                    <button className = 'fave-btn' onClick = {() => {handleClick(religion._id)}}><FaHeart /></button>
                                 </div>
                             </div>
                             
-                            <p>{religions.mission}</p>
+                            <p>{religion.mission}</p>
                         </span>
                     </li>
                 ))}

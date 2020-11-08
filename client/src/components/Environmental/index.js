@@ -16,11 +16,14 @@ const EnvironmentalList = (charity) => {
 
     const [addCharity] = useMutation(ADD_CHARITY);
 
-    const handleClick = async () => {
+    const environment = charities.filter((enviro) => enviro.category === 'environmental');
+    console.log(environment);
+    const handleClick = async (id) => {
         try {
-            await addCharity({
-                variables: {id: charities._id}
+            const updatedUser = await addCharity({
+                variables: {id: id}
             });
+            console.log(updatedUser);
         } catch (e) {
             console.error(e);
         }
@@ -30,21 +33,19 @@ const EnvironmentalList = (charity) => {
         <section className="my-5">
             {/* <h1 id="">Animal Related Charities</h1> */}
             <ul class="category">
-                {charities.map((env) => (
-                    <li className="my-2" key = {env.name}>
-                        {/* <div>{animal.logo}</div>
-                        <div>{AnimalsLogo}</div> */}
+                {environment.map((env) => (
+                    <li className="my-2" key = {env._id}>
                         
                         <span className="test flex-row">
                             <div className = "flex-row">
                                <img src={EnvLogo} className="charLogo  flex-row"/>
                             <h2 className="categoryName flex-row">
-                            <a href= {env.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank" rel = 'noreferrer'>{env.name}</a>
+                            <a href= {env.url} key = {env._id} target="_blank" rel = 'noreferrer'>{env.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{env.location}</h4>
                             <div className = 'flex-row'>
                                     <button className = 'donate-btn' type = 'submit'>Donate</button>
-                                    <button className = 'fave-btn' onClick = {handleClick}><FaHeart /></button>
+                                    <button className = 'fave-btn' onClick = {() => {handleClick(env._id)}}><FaHeart /></button>
                                 </div>
                             </div>
                             

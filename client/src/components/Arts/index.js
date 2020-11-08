@@ -15,12 +15,13 @@ const ArtsList = (charity) => {
     const [addCharity] = useMutation(ADD_CHARITY);
 
     const arts = charities.filter((art) => art.category === 'arts');  
-
-    const handleClick = async () => {
+    console.log(arts);
+    const handleClick = async (id) => {
         try {
-            await addCharity({
-                variables: {id: charities._id}
+            const updatedUser = await addCharity({
+                variables: {id: id}
             });
+            console.log(updatedUser);
         } catch (e) {
             console.error(e);
         }
@@ -31,18 +32,18 @@ const ArtsList = (charity) => {
            
             <ul class="category">
                 {arts.map((art) => (
-                    <li className="my-2" key = {arts.name}>
+                    <li className="my-2" key = {art._id}>
 
                         <span className="test flex-row">
                             <div className = "flex-row">
                                 <img src={ArtsLogo} className="charLogo  flex-row"/>
                             <h2 className="categoryName flex-row">
-                            <a href= {art.url} onClick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank" rel = 'noreferrer'>{art.name}</a>
+                            <a href= {art.url} key = {art._id} target="_blank" rel = 'noreferrer'>{art.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{art.location}</h4>
                             <div className = 'flex-row'>
                                     <button className = 'donate-btn' type = 'submit'>Donate</button>
-                                    <button className = 'fave-btn' onClick = {handleClick}><FaHeart /></button>
+                                    <button className = 'fave-btn' onClick = {() => {handleClick(art._id)}}><FaHeart /></button>
                                 </div>
                             </div>
                             <p>{art.mission}</p>

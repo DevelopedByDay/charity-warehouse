@@ -14,13 +14,14 @@ const CivilRightsList = (charity) => {
 
     const [addCharity] = useMutation(ADD_CHARITY);
 
-    const civilRights = charities.filter((civRight) => civRight.category === 'civil-rights');  
-
-    const handleClick = async () => {
+    const civilRights = charities.filter((civRight) => civRight.category === 'civil rights');  
+    console.log(civilRights);
+    const handleClick = async (id) => {
         try {
-            await addCharity({
-                variables: {id: charities._id}
+            const updatedUser = await addCharity({
+                variables: {id: id}
             });
+            console.log(updatedUser);
         } catch (e) {
             console.error(e);
         }
@@ -38,12 +39,12 @@ const CivilRightsList = (charity) => {
                             <div className = "flex-row">
                                <img src={civilRightsLogo} className="charLogo  flex-row"/>
                             <h2 className="categoryName flex-row">
-                            <a href= {civilRight.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank" rel = 'noreferrer'>{civilRight.name}</a>
+                            <a href= {civilRight.url} key = {civilRight._id} target="_blank" rel = 'noreferrer'>{civilRight.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{civilRight.location}</h4>
                             <div className = 'flex-row'>
                                     <button className = 'donate-btn' type = 'submit'>Donate</button>
-                                    <button className = 'fave-btn' onClick = {handleClick}><FaHeart /></button>
+                                    <button className = 'fave-btn' onClick = {() => {handleClick(civilRight._id)}}><FaHeart /></button>
                                 </div>
                             </div>
                             
