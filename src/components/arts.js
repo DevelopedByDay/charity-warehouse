@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ArtsLogo from '../assets/Arts.png';
+import {FaHeart} from 'react-icons/fa';
 
 const ArtsList = () => {
 
@@ -96,11 +97,15 @@ const ArtsList = () => {
 
                         <span className="test flex-row">
                             <div className = "flex-row">
-                                <img src={ArtsLogo} className="miniLogo flex-row"/>
+                                <img src={ArtsLogo} className="charLogo  flex-row"/>
                             <h2 className="categoryName flex-row">
-                            <a href= {arts.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank">{arts.name}</a>
+                            <a href= {arts.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank" rel = 'noreferrer'>{arts.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{arts.location}</h4>
+                            <div className = 'flex-row'>
+                                    <button className = 'donate-btn' type = 'submit'>Donate</button>
+                                    <button className = 'fave-btn' type = 'submit'><FaHeart /></button>
+                                </div>
                             </div>
                             <p>{arts.mission}</p>
                         </span>

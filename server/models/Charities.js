@@ -9,7 +9,7 @@ const charitySchema = new Schema({
     category: {
         type: String,
     },
-    website: {
+    url: {
         type: String,
     },
     location: {
