@@ -37,6 +37,54 @@ code {
   font-size: 1.75rem;
 } */
 
+/* nav button styles */
+
+/** Button Style **/
+
+.button {
+  /** Font Style **/
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-transform:uppercase;
+  font-size:14px;
+	color:#fff;
+  text-decoration:none;
+	font-weight:bold;
+	text-transform:uppercase;
+  text-shadow:rgba(0, 0, 0, 0.30) 0 -1.25px 0;
+  
+  
+  /** Button Style **/ 
+  margin: 5px;
+  display:-moz-inline-stack;
+  -webkit-font-smoothing:antialiased;
+	display:inline-block;
+	vertical-align:middle;
+	vertical-align:auto;
+	zoom:1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+	border:1px solid #39064d;
+	background: var(--primary);
+	padding:11px 20px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow:rgba(255, 255, 255, 0.3) 0 1px 0, inset rgba(255, 255, 255, 0.3) 0 1px 0;
+	-moz-box-shadow:rgba(255, 255, 255, 0.3) 0 1px 0, inset rgba(255, 255, 255, 0.3) 0 1px 0;
+	box-shadow:rgba(255, 255, 255, 0.3) 0 1px 0, inset rgba(255, 255, 255, 0.3) 0 1px 0;
+}
+
+/** Active State Style **/
+.button:active {
+	border-color:#083559;
+	-webkit-box-shadow:rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 1px 4px;
+	-moz-box-shadow:rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 1px 4px;
+	box-shadow:rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 1px 4px;
+}
+
+
 /* nav style */
 .flex-row {
   display: flex;
@@ -55,6 +103,21 @@ code {
 
 header {
   background: #f1daf1;
+}
+
+.loginSignup {
+  justify-content: right;
+  /* margin-left: 100px; */
+}
+
+.loginSignupButtons {
+  justify-content: right;
+  
+}
+
+.loginSignupForm {
+  justify-content: right;
+  margin-left: 5px;
 }
 
 li a {
@@ -87,12 +150,36 @@ li {
 
 }
 
+/* flex grid for nav section */
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col {
+  flex: 1;
+}
+
+
+/* new nav  */
+
+.nav {
+  /* display: list-item; */
+  vertical-align: middle;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 10px;
+  
+}
+
+/* old nav */
 .nav {
     border-radius: 5px;
     display: inline;
-    background-color: rgba(155, 239, 250);
-    margin: 20px;
+    /* background-color: rgba(155, 239, 250); */
+    margin: 3%;
     padding-right: 20px;
+  
     text-align: center;
     align-items: center;
 }
@@ -104,15 +191,24 @@ li {
   flex-wrap: wrap; */
  
 
-.center {
+/* .center {
     text-align: center;
+} */
+
+.navTitle {
+  text-align: center;
+  background-color: rgb(176, 214, 214);
 }
 
-.navCharIcons {
-  
-  align-items: center;
- 
+.navSection {
+  padding-bottom: 5px;
+  }
 
+.navCharIcons {
+  align-items: center;
+  font-size: large;
+  background-color: rgb(176, 214, 214);
+  text-align: center;
 };
 
 nav a:hover {
@@ -210,6 +306,7 @@ footer {
  margin: 0 20px; 
 }
 
+/* styles the logos in the nav */
 .miniLogo {
   max-width: 5%;
   min-width: 120px;
@@ -220,9 +317,27 @@ footer {
   max-width: 12%;
 }
 
+/* single category style */
+.categoryHeader {
+  font-size: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  margin: 3rem;
+  
+}
+
 .categoryLogo {
 max-width: 25%;
 
+}
+
+.categoryDescription {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  margin-left: 3rem;
 }
 
 .category {
@@ -230,6 +345,91 @@ margin: 5px;
 padding-left: 5%;
 padding-right: 5%;
 }
+
+/* handles style of the header of each charity card-name, icon, location, and donate and favorite */
+.charCardHeader {
+  /* reproduces flex row */
+  /* new style */
+  /* align-content: center; */
+  /* text-align: center; */
+  vertical-align: middle;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 10px;
+}
+
+.mission {
+  margin: 20px;
+}
+
+/* styles the two donate and favorite buttons div */
+
+.donateFavorite {
+  /* reproduces flex row */
+  display: flex;
+  flex-wrap: wrap;
+  /* new style */
+}
+
+/* styles donate button */
+
+.donate-btn {
+  background-color: green;
+  border: none;
+  text-align: center;
+  display: inline-block;
+  cursor: grabbing;
+  border-radius: 50%;
+  margin-left: 100px;
+  font-size: 15px;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+/* styles favorites button */
+
+.fave-btn {
+  background: none;
+  border: none;
+  font-size: 60px;
+  color:whitesmoke;
+  border-style: solid;
+  font-size: 1rem;
+  border-color: red;
+  background-color: lightcoral;
+  cursor: grabbing;
+  border-radius: 10px;
+}
+
+/* styles the logos in the charity cards */
+.charLogo {
+  /* max-width: 12%;
+  min-width: 5%; */
+  width: 12%;
+  margin-right: 15px;
+  /* reproduces flex row */
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+
+/* categoryName here */
+.categoryName {
+  /* padding: 0px; */
+  font-size: 1.4em;
+  /* margin-bottom: 10px; */
+  /* margin-left: 10px; */
+  font-weight: bold;
+  color: rgb(99, 99, 201);
+  box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 12px 0px rgba(0,0,0,0.19);
+  border-radius: 5px;
+  display: inline-table;
+  max-width: 40%;
+  margin: 5px 0;
+  background-color: rgb(168, 193, 240);
+  vertical-align: middle;
+  }
 
 .paddingAuto {
   margin-top: auto;
@@ -354,28 +554,7 @@ background: #fefefe;
 border-color: #125688;
 }
 
-.donate-btn {
-  background-color: green;
-  border: none;
-  text-align: center;
-  display: inline-block;
-  cursor: grabbing;
-  border-radius: 50%;
-  margin-left: 100px;
-  font-size: 15px;
-  width: 60px;
-  height: 60px;
-  margin-right: 20px;
-}
-
-.fave-btn {
-  background: none;
-  border: none;
-  font-size: 60px;
-  color: red;
-  cursor: grabbing;
-}
-
+/* not in mine */
 .header-button {
   margin-top: 100px;
   margin-left: 20px;
@@ -385,18 +564,79 @@ border-color: #125688;
   color: var(--primary);
   cursor: grabbing;
 }
+
 /* media queries */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 830px) {
+  /* .flex-grid {
+    display: inline-block;
+  } */
+
+  .loginSignup {
+    /* justify-content: center; */
+    /* margin-left: 0px; */
+  }
+  
+  .loginSignupButtons {
+    /* justify-content: center; */
+    /* margin-left: 100px; */
+    
+  }
+/* 
+  button.login:after {
+    margin-left: 150px;
+    
+  } */
+
+  .loginSignupForm {
+    justify-content: center;
+    /* margin-left: 105px; */
+  }
+
+  .fave-btn {
+    margin-left: 50px;
+    margin-top: 10px;
+  }
+
+  .donate-btn {
+    margin-left: 50px;
+  }
+
   .flex-row {
     
     justify-content: center;
-
+    
   };
 
+  /* .nav {
+    display: flex;
+  } */
+
+.categoryName {
+    font-size: .5rem;
+  }
+.categoryDescription {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+  .categoryDescription {
+  
+  }
+
+  .categoryTitle {
+    justify-content: center;
+    
+  };
+
+  h1.paddingAuto.flex-row {
+    font-size: 1rem;
+    justify-content: center;
+  }
+
+
   span.categoriesIcon {
-    display: inline-flex;
+  display: inline-flex;
   width: 50%;
   margin: 1%; 
   flex-wrap: wrap;
@@ -406,17 +646,26 @@ border-color: #125688;
   .paddingAuto {
     font-size: 50%;
     justify-content: center;
+    
   }
   /* ul.navCharIcons {
     
     flex-wrap: wrap;
-
   }; */
- .navCharIcons {
-    
-    display: list-item;
 
+  /* styles the nav icons position */
+ .navCharIcons {
   };
+
+  /* not sure what this actually handles */
+  .navLinks {
+  /* vertical-align: middle; */
+  /* display: flex; */
+  /* justify-content: left; */
+  /* align-items: center; */
+  /* margin: 10px; */
+  }
+  
   /* ul {
     
     display: block;
@@ -429,6 +678,17 @@ border-color: #125688;
 
 
   };
+
+  @media only screen and (max-width: 980px) {
+  .fave-btn {
+    margin-left: 250px;
+    margin-top: 10px;
+  }
+
+  /* .donate-btn {
+    margin-left: 100px;
+  }  */
+}
 
   @media only screen and (max-width: 1450px) {
     ul.navCharIcons {

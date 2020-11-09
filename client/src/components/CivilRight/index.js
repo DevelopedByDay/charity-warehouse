@@ -36,19 +36,19 @@ const CivilRightsList = (charity) => {
                     <li className="my-2" key = {civilRight.name}>
 
                         <span className="test flex-row">
-                            <div className = "flex-row">
-                               <img src={civilRightsLogo} className="charLogo  flex-row"/>
-                            <h2 className="categoryName flex-row">
+                            <div className = "charCardHeader">
+                               <img src={civilRightsLogo} className="charLogo"/>
+                            <h2 className="categoryName">
                             <a href= {civilRight.url} key = {civilRight._id} target="_blank" rel = 'noreferrer'>{civilRight.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{civilRight.location}</h4>
-                            <div className = 'flex-row'>
+                            <div className = 'donateFavorite'>
                                     <button className = 'donate-btn' type = 'submit'>Donate</button>
-                                    <button className = 'fave-btn' onClick = {() => {handleClick(civilRight._id)}}><FaHeart /></button>
+                                    <button className = 'fave-btn' onClick = {() => {handleClick(civilRight._id)}}><FaHeart /> Favorite</button>
                                 </div>
                             </div>
                             
-                            <p>{civilRight.mission}</p>
+                            <p className = "mission">{civilRight.mission}</p>
                         </span>
                     </li>
                 ))}

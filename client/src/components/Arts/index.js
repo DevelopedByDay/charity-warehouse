@@ -35,18 +35,18 @@ const ArtsList = (charity) => {
                     <li className="my-2" key = {art._id}>
 
                         <span className="test flex-row">
-                            <div className = "flex-row">
-                                <img src={ArtsLogo} className="charLogo  flex-row"/>
-                            <h2 className="categoryName flex-row">
+                            <div className = "charCardHeader">
+                                <img src={ArtsLogo} className="charLogo"/>
+                            <h2 className="categoryName">
                             <a href= {art.url} key = {art._id} target="_blank" rel = 'noreferrer'>{art.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{art.location}</h4>
-                            <div className = 'flex-row'>
+                            <div className = 'donateFavorite'>
                                     <button className = 'donate-btn' type = 'submit'>Donate</button>
-                                    <button className = 'fave-btn' onClick = {() => {handleClick(art._id)}}><FaHeart /></button>
+                                    <button className = 'fave-btn' onClick = {() => {handleClick(art._id)}}><FaHeart /> Favorite</button>
                                 </div>
                             </div>
-                            <p>{art.mission}</p>
+                            <p className = "mission">{art.mission}</p>
                         </span>
                     </li>
                 ))}

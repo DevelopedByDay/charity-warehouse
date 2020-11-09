@@ -5,10 +5,7 @@ function Hero() {
 return (
     <section className = 'my-5'>
       <div className = 'flex-row'>
-        
-           
             <img src={logo} className="my-2" style={{ width: "100%" }} alt="cover" />
-          
         </div>
     </section>
 )

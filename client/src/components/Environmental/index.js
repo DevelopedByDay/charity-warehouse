@@ -37,19 +37,19 @@ const EnvironmentalList = (charity) => {
                     <li className="my-2" key = {env._id}>
                         
                         <span className="test flex-row">
-                            <div className = "flex-row">
-                               <img src={EnvLogo} className="charLogo  flex-row"/>
-                            <h2 className="categoryName flex-row">
+                            <div className = "charCardHeader">
+                               <img src={EnvLogo} className="charLogo"/>
+                            <h2 className="categoryName">
                             <a href= {env.url} key = {env._id} target="_blank" rel = 'noreferrer'>{env.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{env.location}</h4>
-                            <div className = 'flex-row'>
+                            <div className = 'donateFavorite'>
                                     <button className = 'donate-btn' type = 'submit'>Donate</button>
-                                    <button className = 'fave-btn' onClick = {() => {handleClick(env._id)}}><FaHeart /></button>
+                                    <button className = 'fave-btn' onClick = {() => {handleClick(env._id)}}><FaHeart /> Favorite</button>
                                 </div>
                             </div>
                             
-                            <p>{env.mission}</p>
+                            <p className = "mission">{env.mission}</p>
                         </span>
                     </li>
                 ))}

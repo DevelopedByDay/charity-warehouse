@@ -2,16 +2,18 @@
 
 import React from 'react';
 import Hero from '../Hero';
+
 import AnimalsLogo from '../../assets/Animals.png';
 import ArtsLogo from '../../assets/Arts.png';
 import CivilLibertiesLogo from '../../assets/Civil-Liberties.png';
 import CommunityLogo from '../../assets/Community.png';
 import EnvironmentalLogo from '../../assets/Environmental.png';
 import ReligionsLogo from '../../assets/religions.png';
+
 import {useQuery} from '@apollo/react-hooks';
 import {QUERY_CHARITIES} from '../../utils/queries';
-import AnimalList from '../Animals';
 
+import AnimalList from '../Animals';
 import CivilRightsList from '../CivilRight';
 import CommDevList from '../Community';
 import EnvironmentalList from '../Environmental';
@@ -30,9 +32,9 @@ const SingleCategory = (charity) => {
             case 'animals':
                 return (
                     <div className="flex-row">
-                        <div className="flex-row">
-                            <img src={AnimalsLogo} className="categoryLogo flex-row"/>
-                            <h1 className="paddingAuto flex-row"> Animal Related Charities</h1>
+                        <div className="categoryHeader">
+                            <img src={AnimalsLogo} className="categoryLogo"/>
+                            <h1 className="categoryDescription"> Animal Related Charities</h1>
                         </div>
                         <AnimalList />
                         
@@ -42,9 +44,9 @@ const SingleCategory = (charity) => {
             case 'community':
                 return (
                     <div className="flex-row">
-                        <div className="flex-row">
-                            <img src={CommunityLogo} className="categoryLogo flex-row" alt = 'community logo'/>
-                            <h1 className="flex-row paddingAuto"> Community Related Charities</h1>
+                        <div className="categoryHeader">
+                            <img src={CommunityLogo} className="categoryLogo"/>
+                            <h1 className="categoryDescription"> Community Related Charities</h1>
                         </div>
                         
                         <CommDevList />
@@ -55,9 +57,9 @@ const SingleCategory = (charity) => {
             case 'religion':
                 return (
                         <div className="flex-row">
-                        <div className="flex-row">
-                            <img src={ReligionsLogo} className="categoryLogo flex-row" alt = 'religion logo'/>
-                            <h1 className="flex-row paddingAuto"> Religious Charities</h1>
+                        <div className="categoryHeader">
+                            <img src={ReligionsLogo} className="categoryLogo"/>
+                            <h1 className="categoryDescription"> Religious Charities</h1>
                         </div>
                         
                         <ReligionList />
@@ -69,9 +71,9 @@ const SingleCategory = (charity) => {
                 return (
 
                         <div className="flex-row">
-                        <div className="flex-row">
-                            <img src={ArtsLogo} className="categoryLogo flex-row" alt = 'art logo'/>
-                            <h1 className="flex-row paddingAuto"> Arts Charities</h1>
+                        <div className="categoryHeader">
+                            <img src={ArtsLogo} className="categoryLogo"/>
+                            <h1 className="categoryDescription"> Arts Charities</h1>
                         </div>
                         
                         <ArtsList />
@@ -79,12 +81,12 @@ const SingleCategory = (charity) => {
                     </div>
                 );
 
-            case 'civil-rights':
+            case 'civilRights':
                 return (
                     <div className="flex-row">
-                        <div className="flex-row">
-                            <img src={CivilLibertiesLogo} className="categoryLogo flex-row" alt = 'civil rights logo'/>
-                            <h1 className="flex-row paddingAuto"> Civil Rights Charities</h1>
+                        <div className="categoryHeader">
+                            <img src={CivilLibertiesLogo} className="categoryLogo"/>
+                            <h1 className="categoryDescription"> Civil Rights Charities</h1>
                         </div>
                         
                         <CivilRightsList />
@@ -95,9 +97,9 @@ const SingleCategory = (charity) => {
             case 'environmental':
                 return (
                     <div className="flex-row">
-                        <div className="flex-row">
-                            <img src={EnvironmentalLogo} className="categoryLogo flex-row" alt = 'environmental logo'/>
-                            <h1 className="flex-row paddingAuto"> Environmental Charities</h1>
+                        <div className="categoryHeader">
+                            <img src={EnvironmentalLogo} className="categoryLogo"/>
+                            <h1 className="categoryDescription"> Environmental Charities</h1>
                         </div>
                         
                         <EnvironmentalList />

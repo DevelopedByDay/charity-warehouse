@@ -36,20 +36,22 @@ const AnimalList = (charity) => {
             <ul className="category">
                 {animals.map((animal) => (
                     <li className="my-2" key = {animal._id}>
+
                         <span className="test flex-row">
-                            <div className = "flex-row">
-                               <img src={AnimalsLogo} className="charLogo flex-row"/>
-                            <h2 className="categoryName flex-row">
+
+                            <div className = "charCardHeader">
+                               <img src={AnimalsLogo} className="charLogo"/>
+                            <h2 className="categoryName">
                             <a href = {animal.url} key = {animal._id} target = '_blank' rel = 'noreferer'>{animal.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{animal.location}</h4>
                             
-                                <div className = 'flex-row'>
+                                <div className = 'donateFavorite'>
                                     <button className = 'donate-btn' type = 'submit'>Donate</button>
-                                    <button className = 'fave-btn' onClick = {() => {handleClick(animal._id)}} ><FaHeart /></button>
+                                    <button className = 'fave-btn' onClick = {() => {handleClick(animal._id)}} ><FaHeart /> Favorite</button>
                                 </div>
                             </div>
-                            <p>{animal.mission}</p>
+                            <p className = "mission">{animal.mission}</p>
                         </span>
                     </li>
                 ))}

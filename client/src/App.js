@@ -13,9 +13,9 @@ import './App.css';
 import {ApolloProvider} from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 import SingleCategory from './components/SingleCategory';
-import Login from '../src/pages/Login';
-import Signup from '../src/pages/Signup';
-import Profile from '../src/pages/Profile';
+// import Login from '../src/pages/Login';
+// import Signup from '../src/pages/Signup';
+// import Profile from '../src/pages/Profile';
 
 
 const client = new ApolloClient({
@@ -44,7 +44,7 @@ function App() {
       icon: ArtsLogo,
     },
 
-    { name: 'civil-rights',
+    { name: 'civilRights',
       icon: CivilLibertiesLogo,
     },
 
@@ -70,20 +70,22 @@ function App() {
       <Router>
       <div>
         <Header></Header>
+        {/* <div>
+          <Route exact path = '/login' component = {Login} />
+          <Route exact path = '/signup' component = {Signup} />
+          <Route exact path = '/profile/:username?' component = {Profile} />
+        </div> */}
         <Nav
         categories = {categories}
         setCurrentCategory = {setCurrentCategory}
         currentCategory = {currentCategory}
         ></Nav>
+        
         <main>   
           <SingleCategory currentCategory = {currentCategory}></SingleCategory>
         </main>
         
-        <div>
-          <Route exact path = '/login' component = {Login} />
-          <Route exact path = '/signup' component = {Signup} />
-          <Route exact path = '/profile/:username?' component = {Profile} />
-        </div>
+        
         
         <footer>
         <Footer></Footer> 
