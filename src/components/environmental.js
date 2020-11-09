@@ -99,19 +99,20 @@ const EnvironmentalList = () => {
                         <div>{AnimalsLogo}</div> */}
                         
                         <span className="test flex-row">
-                            <div className = "flex-row">
-                               <img src={EnvLogo} className="charLogo  flex-row"/>
-                            <h2 className="categoryName flex-row">
+                            <div className = "charCardHeader">
+                               <img src={EnvLogo} className="charLogo"/>
+                            <h2 className="categoryName">
                             <a href= {env.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank" rel = 'noreferrer'>{env.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{env.location}</h4>
-                            <div className = 'flex-row'>
+                            
+                                <div className = 'donateFavorite'>
                                     <button className = 'donate-btn' type = 'submit'>Donate</button>
-                                    <button className = 'fave-btn' type = 'submit'><FaHeart /></button>
+                                    <button className = 'fave-btn' type = 'submit'><FaHeart /> Favorite</button>
                                 </div>
                             </div>
                             
-                            <p>{env.mission}</p>
+                            <p className = "mission">{env.mission}</p>
                         </span>
                     </li>
                 ))}

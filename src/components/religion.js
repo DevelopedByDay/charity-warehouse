@@ -161,27 +161,26 @@ const ReligionList = () => {
 
     return (
         <section className="my-5">
-            {/* <h1 id="">Animal Related Charities</h1> */}
+            
             <ul class="category">
                 {religions.map((religions) => (
                     <li className="my-2" key = {religions.name}>
-                        {/* <div>{animal.logo}</div>
-                        <div>{AnimalsLogo}</div> */}
-                        
+                     
                         <span className="test flex-row">
-                            <div className = "flex-row">
-                               <img src={religionsLogo} className="charLogo  flex-row"/>
-                            <h2 className="categoryName flex-row">
+                            <div className = "charCardHeader">
+                               <img src={religionsLogo} className="charLogo"/>
+                            <h2 className="categoryName">
                             <a href= {religions.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank" rel = 'noreferrer'>{religions.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{religions.location}</h4>
-                            <div className = 'flex-row'>
+                                
+                                <div className = 'donateFavorite'>
                                     <button className = 'donate-btn' type = 'submit'>Donate</button>
-                                    <button className = 'fave-btn' type = 'submit'><FaHeart /></button>
+                                    <button className = 'fave-btn' type = 'submit'><FaHeart /> Favorite</button>
                                 </div>
                             </div>
                             
-                            <p>{religions.mission}</p>
+                            <p className = "mission">{religions.mission}</p>
                         </span>
                     </li>
                 ))}

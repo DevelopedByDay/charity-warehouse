@@ -96,18 +96,19 @@ const ArtsList = () => {
                     <li className="my-2" key = {arts.name}>
 
                         <span className="test flex-row">
-                            <div className = "flex-row">
-                                <img src={ArtsLogo} className="charLogo  flex-row"/>
-                            <h2 className="categoryName flex-row">
+                            <div className = "charCardHeader">
+                                <img src={ArtsLogo} className="charLogo"/>
+                            <h2 className="categoryName">
                             <a href= {arts.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank" rel = 'noreferrer'>{arts.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{arts.location}</h4>
-                            <div className = 'flex-row'>
+                                
+                                <div className = 'donateFavorite'>
                                     <button className = 'donate-btn' type = 'submit'>Donate</button>
-                                    <button className = 'fave-btn' type = 'submit'><FaHeart /></button>
+                                    <button className = 'fave-btn' type = 'submit'><FaHeart /> Favorite</button>
                                 </div>
                             </div>
-                            <p>{arts.mission}</p>
+                            <p className = "mission">{arts.mission}</p>
                         </span>
                     </li>
                 ))}

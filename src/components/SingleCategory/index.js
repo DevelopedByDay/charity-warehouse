@@ -23,9 +23,9 @@ console.log(category);
             case 'animals':
                 return (
                     <div className="flex-row">
-                        <div className="flex-row">
-                            <img src={AnimalsLogo} className="categoryLogo flex-row"/>
-                            <h1 className="paddingAuto flex-row"> Animal Related Charities</h1>
+                        <div className="categoryHeader">
+                            <img src={AnimalsLogo} className="categoryLogo"/>
+                            <h1 className="categoryDescription"> Animal Related Charities</h1>
                         </div>
                         
                         <AnimalList />
@@ -36,9 +36,9 @@ console.log(category);
             case 'community':
                 return (
                     <div className="flex-row">
-                        <div className="flex-row">
-                            <img src={CommunityLogo} className="categoryLogo flex-row" alt = 'community logo'/>
-                            <h1 className="flex-row paddingAuto"> Community Related Charities</h1>
+                        <div className="categoryHeader">
+                            <img src={CommunityLogo} className="categoryLogo"/>
+                            <h1 className="categoryDescription"> Community Related Charities</h1>
                         </div>
                         
                         <CommDevList />
@@ -49,9 +49,9 @@ console.log(category);
             case 'religion':
                 return (
                         <div className="flex-row">
-                        <div className="flex-row">
-                            <img src={religionsLogo} className="categoryLogo flex-row" alt = 'religion logo'/>
-                            <h1 className="flex-row paddingAuto"> Religious Charities</h1>
+                        <div className="categoryHeader">
+                            <img src={religionsLogo} className="categoryLogo"/>
+                            <h1 className="categoryDescription"> Religious Charities</h1>
                         </div>
                         
                         <ReligionList />
@@ -63,9 +63,9 @@ console.log(category);
                 return (
 
                         <div className="flex-row">
-                        <div className="flex-row">
-                            <img src={ArtsLogo} className="categoryLogo flex-row" alt = 'art logo'/>
-                            <h1 className="flex-row paddingAuto"> Arts Charities</h1>
+                        <div className="categoryHeader">
+                            <img src={ArtsLogo} className="categoryLogo"/>
+                            <h1 className="categoryDescription"> Arts Charities</h1>
                         </div>
                         
                         <ArtsList />
@@ -73,12 +73,12 @@ console.log(category);
                     </div>
                 );
 
-            case 'civil-rights':
+            case 'civilRights':
                 return (
                     <div className="flex-row">
-                        <div className="flex-row">
-                            <img src={civilRightsLogo} className="categoryLogo flex-row" alt = 'civil rights logo'/>
-                            <h1 className="flex-row paddingAuto"> Civil Rights Charities</h1>
+                        <div className="categoryHeader">
+                            <img src={civilRightsLogo} className="categoryLogo"/>
+                            <h1 className="categoryDescription"> Civil Rights Charities</h1>
                         </div>
                         
                         <CivilRightsList />
@@ -89,9 +89,9 @@ console.log(category);
             case 'environmental':
                 return (
                     <div className="flex-row">
-                        <div className="flex-row">
-                            <img src={EnvLogo} className="categoryLogo flex-row" alt = 'environmental logo'/>
-                            <h1 className="flex-row paddingAuto"> Environmental Charities</h1>
+                        <div className="categoryHeader">
+                            <img src={EnvLogo} className="categoryLogo"/>
+                            <h1 className="categoryDescription"> Environmental Charities</h1>
                         </div>
                         
                         <EnvironmentalList />

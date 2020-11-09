@@ -154,23 +154,22 @@ const CommDevList = () => {
             <ul class="category">
                 {comdevs.map((community) => (
                     <li className="my-2" key = {community.name}>
-                        {/* <div>{animal.logo}</div>
-                        <div>{AnimalsLogo}</div> */}
-                        
+                    
                         <span className="test flex-row">
-                            <div className = "flex-row">
-                               <img src={CommunityLogo} className="charLogo  flex-row"/>
-                            <h2 className="categoryName flex-row">
+                            <div className = "charCardHeader">
+                               <img src={CommunityLogo} className="charLogo"/>
+                            <h2 className="categoryName">
                             <a href= {community.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank" rel = 'noreferrer'>{community.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{community.location}</h4>
-                            <div className = 'flex-row'>
+                            
+                                <div className = 'donateFavorite'>
                                     <button className = 'donate-btn' type = 'submit'>Donate</button>
-                                    <button className = 'fave-btn' type = 'submit'><FaHeart /></button>
+                                    <button className = 'fave-btn' type = 'submit'><FaHeart /> Favorite</button>
                                 </div>
                             </div>
                             
-                            <p>{community.mission}</p>
+                            <p className = "mission">{community.mission}</p>
                         </span>
                     </li>
                 ))}

@@ -149,27 +149,26 @@ const AnimalList = () => {
 
     return (
         <section className="my-5">
-            {/* <h1 id="">Animal Related Charities</h1> */}
+          
             <ul class="category">
                 {animals.map((animal) => (
                     <li className="my-2" key = {animal.name}>
-                        {/* <div>{animal.logo}</div>
-                        <div>{AnimalsLogo}</div> */}
                         
                         <span className="test flex-row">
-                            <div className = "flex-row">
-                               <img src={AnimalsLogo} className="charLogo flex-row"/>
-                            <h2 className="categoryName flex-row">
+                            <div className = "charCardHeader">
+                               <img src={AnimalsLogo} className="charLogo"/>
+                            <h2 className="categoryName">
                             <a href= {animal.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank" rel = 'noreferrer'>{animal.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{animal.location}</h4>
                             
-                                <div className = 'flex-row'>
+                                <div className = 'donateFavorite'>
                                     <button className = 'donate-btn' type = 'submit'>Donate</button>
-                                    <button className = 'fave-btn' type = 'submit'><FaHeart /></button>
+                                    <button className = 'fave-btn' type = 'submit'><FaHeart /> Favorite</button>
                                 </div>
+
                             </div>
-                            <p>{animal.mission}</p>
+                            <p className = "mission">{animal.mission}</p>
                         </span>
                     </li>
                 ))}

@@ -27,7 +27,7 @@ function App() {
       icon: ArtsLogo,
     },
 
-    { name: 'civil-rights',
+    { name: 'civilRights',
       icon: CivilLibertiesLogo,
     },
 

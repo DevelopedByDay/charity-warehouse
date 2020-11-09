@@ -97,19 +97,21 @@ const CivilRightsList = () => {
                     <li className="my-2" key = {civilRights.name}>
 
                         <span className="test flex-row">
-                            <div className = "flex-row">
-                               <img src={civilRightsLogo} className="charLogo  flex-row"/>
-                            <h2 className="categoryName flex-row">
+                            <div className = "charCardHeader">
+                               <img src={civilRightsLogo} className="charLogo"/>
+                            <h2 className="categoryName">
                             <a href= {civilRights.url} onclick="return trackLinkClick('Search Result Click - Name', '', '0|135562279', event);" target="_blank" rel = 'noreferrer'>{civilRights.name}</a>
                             </h2>
                             <h4 className="cityState flex-row">{civilRights.location}</h4>
-                            <div className = 'flex-row'>
-                                    <button className = 'donate-btn' type = 'submit'>Donate</button>
-                                    <button className = 'fave-btn' type = 'submit'><FaHeart /></button>
-                                </div>
-                            </div>
                             
-                            <p>{civilRights.mission}</p>
+                                    <div className = 'donateFavorite'>
+                                        <button className = 'donate-btn' type = 'submit'>Donate</button>
+                                        <button className = 'fave-btn' type = 'submit'><FaHeart /> Favorite</button>
+                                    </div>
+
+                                </div>
+              
+                            <p className = "mission">{civilRights.mission}</p>
                         </span>
                     </li>
                 ))}
