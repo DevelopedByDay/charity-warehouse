@@ -1,0 +1,471 @@
+:root {
+  --primary: #8c54ff;
+  --secondary: #f3a847;
+  --tertiary: #b12704;
+  --light: #fafafa;
+  --dark: #000000;
+  --darker: #111111;
+  --error: rgb(228, 46, 1);
+  --spacing-one: calc(1rem * 0.5);
+  --spacing-two: calc(1rem);
+  --spacing-five: calc(2.5rem);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* .modalContainer {
+  background: var(--darker);
+  border-radius: 5px;
+  max-width: 100%;
+  margin: 50px auto;
+  padding: 15px;
+  width: 960px;
+} */
+/* h3 {
+  font-size: 1.75rem;
+} */
+
+/* nav style */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.px-1 {
+  padding-right: var(--spacing-one);
+  padding-left: var(--spacing-one);
+}
+
+.mx-2 {
+  margin-right: var(--spacing-two);
+  margin-left: var(--spacing-two);
+}
+
+header {
+  background: #f1daf1;
+}
+
+li a {
+  color: var(--dark);
+}
+
+li a:hover {
+  color: var(--darkest);
+}
+
+.mx-1 {
+  margin-right: var(--spacing-one);
+  margin-left: var(--spacing-one);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  background: rgb(236, 182, 232);
+  color: rgb(73, 70, 70);
+  font-family: 'Arial Rounded MT';
+}
+
+li {
+  list-style: none;
+
+}
+
+.nav {
+    border-radius: 5px;
+    display: inline;
+    background-color: rgba(155, 239, 250);
+    margin: 20px;
+    padding-right: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+/* span.categoriesIcon {
+  /* display: inline-flex;
+  width: 50%;
+  margin: 1%; 
+  flex-wrap: wrap; */
+ 
+
+.center {
+    text-align: center;
+}
+
+.navCharIcons {
+  
+  align-items: center;
+ 
+
+};
+
+nav a:hover {
+  /* text-decoration: none; */
+}
+
+nav li {
+
+  cursor: pointer;
+  
+}
+
+img.miniLogo {
+
+  align-items: center;
+}
+
+.test {
+    box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 12px 0px rgba(0,0,0,0.19);
+    border-radius: 5px;
+    display: inline-table;
+    width: 100%;
+    background-color: rgb(176, 214, 214);
+    border-spacing: 20px;
+   
+}   
+
+span:hover {
+  box-shadow: 0px 5px 6px -3px rgba(0,0,0,0.2), 0px 9px 12px 1px rgba(0,0,0,0.14), 0px 3px 16px 2px rgba(0,0,0,0.12);
+}
+
+.categoryName {
+padding: 0px;
+font-size: 1.4em;
+margin-bottom: 10px;
+margin-left: 0px;
+font-weight: bold;
+color: rgb(99, 99, 201);
+box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 12px 0px rgba(0,0,0,0.19);
+border-radius: 5px;
+display: inline-table;
+max-width: 40%;
+margin: 5px 0;
+background-color: rgb(168, 193, 240);
+}
+
+.cityState {
+  font-style: italic;
+  margin-left: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width: 30%;
+}
+
+footer {
+  text-align: center; 
+}
+/* hero */
+.impact-results-hero {
+  background-image: url(https://d20umu42aunjpx.cloudfront.net/home/banner/impact-header.png);
+}
+
+#home .mfg-home-search-seasonal {
+  padding-top: 35%;
+  background-position: top;
+}
+
+.responsivebg {
+  position: relative;
+  height: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.mfgtextabsolute {
+  font-weight: normal;
+  position: absolute;
+  font-family: "washington","oswld",sans-serif;
+  color: #fff;
+  margin: 0 20px;
+}
+
+.home-search-seasonal .blue-on-white {
+  font-size: 36px;
+}
+
+/* //note: make the motto dissapear at a certian screen width leaving only the logo */
+.motto {
+  margin-top: auto;
+  font-family: arial;
+  font-style: bold;
+}
+
+.logo {
+ margin: 0 20px; 
+}
+
+.miniLogo {
+  max-width: 5%;
+  min-width: 120px;
+  
+}
+
+.charLogo {
+  max-width: 12%;
+}
+
+.categoryLogo {
+max-width: 25%;
+
+}
+
+.category {
+margin: 5px;
+padding-left: 5%;
+padding-right: 5%;
+}
+
+.paddingAuto {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 5rem;
+}
+
+.my-2 {
+  /* margin-top: var(--spacing-two); */
+  margin-bottom: var(--spacing-two);
+}
+/* .my-5 {
+  margin-top: var(--spacing-five);
+  margin-bottom: var(--spacing-five);
+} */
+body {
+  background: #D0D8DB;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+textarea {
+  resize: none;
+}
+
+.text {
+color: white;
+font-size: 20px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+white-space: nowrap;
+}
+
+.svg-inline--fa {
+vertical-align: -0.200em;
+}
+
+.rounded-social-buttons {
+text-align: center;
+}
+
+.rounded-social-buttons .social-button {
+display: inline-block;
+position: relative;
+cursor: pointer;
+width: 3.125rem;
+height: 3.125rem;
+border: 0.125rem solid transparent;
+padding: 0;
+text-decoration: none;
+text-align: center;
+color: #fefefe;
+font-size: 1.5625rem;
+font-weight: normal;
+line-height: 2em;
+border-radius: 1.6875rem;
+transition: all 0.5s ease;
+margin-right: 0.25rem;
+margin-bottom: 0.25rem;
+}
+
+.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+-webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+}
+
+.rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram {
+font-size: 25px;
+}
+
+.rounded-social-buttons .social-button.facebook {
+background: #3b5998;
+}
+
+.rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
+color: #3b5998;
+background: #fefefe;
+border-color: #3b5998;
+}
+
+.rounded-social-buttons .social-button.twitter {
+background: #55acee;
+}
+
+.rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
+color: #55acee;
+background: #fefefe;
+border-color: #55acee;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+background: #007bb5;
+}
+
+.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+color: #007bb5;
+background: #fefefe;
+border-color: #007bb5;
+}
+
+.rounded-social-buttons .social-button.youtube {
+background: #bb0000;
+}
+
+.rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
+color: #bb0000;
+background: #fefefe;
+border-color: #bb0000;
+}
+
+.rounded-social-buttons .social-button.instagram {
+background: #125688;
+}
+
+.rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
+color: #125688;
+background: #fefefe;
+border-color: #125688;
+}
+
+.donate-btn {
+  background-color: green;
+  border: none;
+  text-align: center;
+  display: inline-block;
+  cursor: grabbing;
+  border-radius: 50%;
+  margin-left: 100px;
+  font-size: 15px;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.fave-btn {
+  background: none;
+  border: none;
+  font-size: 60px;
+  color: red;
+  cursor: grabbing;
+}
+
+.header-button {
+  margin-top: 100px;
+  margin-left: 20px;
+  background: none;
+  border: 1px;
+  font-size: 40px;
+  color: var(--primary);
+  cursor: grabbing;
+}
+/* media queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 830px) {
+  .flex-row {
+    
+    justify-content: center;
+
+  };
+
+  span.categoriesIcon {
+    display: inline-flex;
+  width: 50%;
+  margin: 1%; 
+  flex-wrap: wrap;
+   
+  };
+
+  .paddingAuto {
+    font-size: 50%;
+    justify-content: center;
+  }
+  /* ul.navCharIcons {
+    
+    flex-wrap: wrap;
+
+  }; */
+ .navCharIcons {
+    
+    display: list-item;
+
+  };
+  /* ul {
+    
+    display: block;
+  
+} */
+/* li {
+  list-style;
+  
+} */
+
+
+  };
+
+  @media only screen and (max-width: 1450px) {
+    ul.navCharIcons {
+      
+      justify-content: center;
+
+    };
+    .categoryLogo {
+      justify-content: center;
+    };
+
+    .paddingAuto {
+      margin-top: auto;
+      margin-bottom: auto;
+      font-size: 4rem;
+      margin : auto;
+    }
+    };
+  
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 823px) {
+
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {background: pink;}
+}
