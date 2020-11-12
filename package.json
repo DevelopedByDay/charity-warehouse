@@ -1,6 +1,9 @@
 {
   "name": "charity-warehouse",
   "version": "0.1.0",
+  "engines": {
+    "node": "12.18.3"
+  },
   "dependencies": {
     "@apollo/react-hooks": "^4.0.0",
     "antd": "^4.8.0",
