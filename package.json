@@ -1,6 +1,7 @@
 {
   "name": "charity-warehouse",
   "version": "0.1.0",
+  "main": "server/server.js",
   "engines": {
     "node": "12.18.3"
   },
@@ -41,7 +42,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "cd client && npm run build"
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
