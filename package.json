@@ -5,6 +5,11 @@
   "engines": {
     "node": "12.18.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevelopedByDay/charity-warehouse.git"
+  },
+  "homepage": "https://github.com/DevelopedByDay/charity-warehouse#readme",
   "dependencies": {
     "@apollo/react-hooks": "^4.0.0",
     "antd": "^4.8.0",
