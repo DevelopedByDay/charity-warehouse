@@ -7,11 +7,15 @@ import {useQuery, useMutation} from '@apollo/react-hooks';
 import {QUERY_CHARITIES} from '../../utils/queries';
 import {ADD_CHARITY} from '../../utils/mutations';
 import {useParams} from 'react-router-dom';
+import Auth from '../../utils/auth';
 
 
-const ReligionList = (charity) => {
+const ReligionList = () => {
+    
+    const me = Auth.getProfile().data.username;
     const {loading, data} = useQuery(QUERY_CHARITIES);
     const charities = data?.charities || [];
+    console.log(charities);
 
     const {username: userParam} = useParams();
 
@@ -33,7 +37,7 @@ const ReligionList = (charity) => {
     
     return (
         <section className="my-5">
-            {/* <h1 id="">Animal Related Charities</h1> */}
+            
             <ul class="category">
                 {religions.map((religion) => (
                     <li className="my-2" key = {religion._id}>

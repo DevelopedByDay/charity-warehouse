@@ -6,6 +6,7 @@ import AnimalsLogo from '../src/assets/Animals.png';
 import ArtsLogo from '../src/assets/Arts.png';
 import CivilLibertiesLogo from '../src/assets/Civil-Liberties.png';
 import CommunityLogo from '../src/assets/Community.png';
+import FavoritesLogo from '../src/assets/favorites.png';
 import EnvironmentalLogo from '../src/assets/Environmental.png';
 import ReligionsLogo from '../src/assets/religions.png';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
@@ -59,6 +60,11 @@ function App() {
 
     { name: 'religion',
       icon: ReligionsLogo,
+    },
+
+    {
+      name: 'favorites',
+      icon: FavoritesLogo
     }
   ]);
 
@@ -82,7 +88,7 @@ function App() {
         ></Nav>
         
         <main>   
-          <SingleCategory currentCategory = {currentCategory}></SingleCategory>
+          <SingleCategory client = {client} currentCategory = {currentCategory}></SingleCategory>
         </main>
         
         

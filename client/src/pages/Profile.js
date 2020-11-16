@@ -26,13 +26,13 @@ const Profile = () => {
         return <div>Loading...</div>
     }
 
-    if (!user?.username) {
-        return (
-            <h4>
-                You need to be logged in to see this page.
-            </h4>
-        );
-    }
+    // if (!user?.username) {
+    //     return (
+    //         <h4>
+    //             You need to be logged in to see this page.
+    //         </h4>
+    //     );
+    // }
 
     
 
@@ -40,7 +40,7 @@ const Profile = () => {
         <div>
             <div>
                 <h2>
-                    Viewing {user.username}'s profile.
+                    {/* Viewing {user.username}'s profile. */}
                 </h2>
             </div>
 

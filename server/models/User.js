@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-const Charity = require('./Charity');
 const bcrypt = require('bcrypt');
 
 
@@ -21,7 +20,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    // set savedBooks to be an array of data that adheres to the charitySchema
+    // set savedCharities to be an array of data that adheres to the charitySchema
     savedCharities: [
       {
         type: Schema.Types.ObjectId,
@@ -53,9 +52,9 @@ userSchema.methods.isCorrectPassword = async function (password) {
 };
 
 // when we query a user, we'll also get another field called `charityCount` with the number of saved charities we have
-userSchema.virtual('charityCount').get(function () {
-  return this.savedCharities.length;
-});
+// userSchema.virtual('charityCount').get(function () {
+//   return this.savedCharities.length;
+// });
 
 const User = model('User', userSchema);
 

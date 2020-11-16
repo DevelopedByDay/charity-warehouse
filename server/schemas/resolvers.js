@@ -19,6 +19,17 @@ const resolvers = {
     charities: async (parent, {name}) => {
       const params = name ? {name} : {};
       return Charity.find(params);
+    },
+
+    savedCharities: async (parent, {username}) => {
+      const params = username ? {username} : {};
+      return Charity.find(params);
+    },
+
+    user: async (parent, {username}) => {
+      return User.findOne({username})
+        .select('-__v -password')
+        .populate('savedCharities');
     }
   },
 

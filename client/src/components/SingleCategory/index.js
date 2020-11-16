@@ -9,10 +9,10 @@ import CivilLibertiesLogo from '../../assets/Civil-Liberties.png';
 import CommunityLogo from '../../assets/Community.png';
 import EnvironmentalLogo from '../../assets/Environmental.png';
 import ReligionsLogo from '../../assets/religions.png';
-
+import FavoriteLogo from '../../assets/favorites.png';
 import {useQuery} from '@apollo/react-hooks';
 import {QUERY_CHARITIES} from '../../utils/queries';
-
+import SavedCharities from '../SavedCharities';
 import AnimalList from '../Animals';
 import CivilRightsList from '../CivilRight';
 import CommDevList from '../Community';
@@ -103,6 +103,21 @@ const SingleCategory = (charity) => {
                         </div>
                         
                         <EnvironmentalList />
+                        
+                    </div>
+
+
+                );
+
+                case 'favorites':
+                return (
+                    <div className="flex-row">
+                        <div className="categoryHeader">
+                            <img src={FavoriteLogo} className="categoryLogo"/>
+                            <h1 className="categoryDescription">My Charities</h1>
+                        </div>
+                        
+                        <SavedCharities />
                         
                     </div>
 
