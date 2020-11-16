@@ -4,28 +4,27 @@ import {FaHeart} from 'react-icons/fa';
 import {useQuery, useMutation} from '@apollo/react-hooks';
 import {QUERY_CHARITIES} from '../../utils/queries';
 import {ADD_CHARITY} from '../../utils/mutations';
-import {useParams} from 'react-router-dom';
 
-const ArtsList = (charity) => {
+const ArtsList = () => {
     const {loading, data} = useQuery(QUERY_CHARITIES);
     const charities = data?.charities || [];
-
-    const {username: userParam} = useParams();
 
     const [addCharity] = useMutation(ADD_CHARITY);
 
     const arts = charities.filter((art) => art.category === 'arts');  
-    console.log(arts);
     const handleClick = async (id) => {
         try {
-            const updatedUser = await addCharity({
+            await addCharity({
                 variables: {id: id}
             });
-            console.log(updatedUser);
         } catch (e) {
             console.error(e);
         }
     };
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
 
     return (
         <section className="my-5">
@@ -33,10 +32,9 @@ const ArtsList = (charity) => {
             <ul class="category">
                 {arts.map((art) => (
                     <li className="my-2" key = {art._id}>
-
                         <span className="test flex-row">
                             <div className = "charCardHeader">
-                                <img src={ArtsLogo} className="charLogo"/>
+                                <img src={ArtsLogo} alt = 'arts logo' className="charLogo"/>
                             <h2 className="categoryName">
                             <a href= {art.url} key = {art._id} target="_blank" rel = 'noreferrer'>{art.name}</a>
                             </h2>

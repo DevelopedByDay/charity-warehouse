@@ -21,10 +21,9 @@ function Nav(props) {
                             key = {category.name}>
                         
                             <span className = {`navLinks`} onClick = {() => {setCurrentCategory(category)}}>
-                            <a data-testid="link" href = '/' ></a>
-                            {<img src={category.icon} className = "miniLogo"/>}
+                                {<img src={category.icon} alt = 'category icon' className = "miniLogo"/>}
 
-                            {capitalizeFirstLetter(category.name)}
+                                {capitalizeFirstLetter(category.name)}
                             </span>
                             
                         </li>

@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Hero from '../Hero';
-
 import AnimalsLogo from '../../assets/Animals.png';
 import ArtsLogo from '../../assets/Arts.png';
 import CivilLibertiesLogo from '../../assets/Civil-Liberties.png';
@@ -10,8 +9,6 @@ import CommunityLogo from '../../assets/Community.png';
 import EnvironmentalLogo from '../../assets/Environmental.png';
 import ReligionsLogo from '../../assets/religions.png';
 import FavoriteLogo from '../../assets/favorites.png';
-import {useQuery} from '@apollo/react-hooks';
-import {QUERY_CHARITIES} from '../../utils/queries';
 import SavedCharities from '../SavedCharities';
 import AnimalList from '../Animals';
 import CivilRightsList from '../CivilRight';
@@ -22,10 +19,6 @@ import ArtsList from '../Arts';
 
 
 const SingleCategory = (charity) => {
-    const {loading, data} = useQuery(QUERY_CHARITIES);
-    const charities = data?.charities || [];
-    console.log(charity.currentCategory);
-    console.log(charity);
 
     const selectedCategory = (charity) => {
         switch (charity) {
@@ -33,7 +26,7 @@ const SingleCategory = (charity) => {
                 return (
                     <div className="flex-row">
                         <div className="categoryHeader">
-                            <img src={AnimalsLogo} className="categoryLogo"/>
+                            <img src={AnimalsLogo} alt = 'animal logo' className="categoryLogo"/>
                             <h1 className="categoryDescription"> Animal Related Charities</h1>
                         </div>
                         <AnimalList />
@@ -45,10 +38,9 @@ const SingleCategory = (charity) => {
                 return (
                     <div className="flex-row">
                         <div className="categoryHeader">
-                            <img src={CommunityLogo} className="categoryLogo"/>
+                            <img src={CommunityLogo} alt = 'community logo' className="categoryLogo"/>
                             <h1 className="categoryDescription"> Community Related Charities</h1>
                         </div>
-                        
                         <CommDevList />
                         
                     </div>
@@ -58,10 +50,9 @@ const SingleCategory = (charity) => {
                 return (
                         <div className="flex-row">
                         <div className="categoryHeader">
-                            <img src={ReligionsLogo} className="categoryLogo"/>
+                            <img src={ReligionsLogo} alt = 'religion logo' className="categoryLogo"/>
                             <h1 className="categoryDescription"> Religious Charities</h1>
                         </div>
-                        
                         <ReligionList />
                         
                     </div>
@@ -72,10 +63,9 @@ const SingleCategory = (charity) => {
 
                         <div className="flex-row">
                         <div className="categoryHeader">
-                            <img src={ArtsLogo} className="categoryLogo"/>
+                            <img src={ArtsLogo} alt = 'arts logo' className="categoryLogo"/>
                             <h1 className="categoryDescription"> Arts Charities</h1>
                         </div>
-                        
                         <ArtsList />
                         
                     </div>
@@ -85,10 +75,9 @@ const SingleCategory = (charity) => {
                 return (
                     <div className="flex-row">
                         <div className="categoryHeader">
-                            <img src={CivilLibertiesLogo} className="categoryLogo"/>
+                            <img src={CivilLibertiesLogo} alt = 'civil liberties logo' className="categoryLogo"/>
                             <h1 className="categoryDescription"> Civil Rights Charities</h1>
                         </div>
-                        
                         <CivilRightsList />
                         
                     </div>
@@ -98,10 +87,9 @@ const SingleCategory = (charity) => {
                 return (
                     <div className="flex-row">
                         <div className="categoryHeader">
-                            <img src={EnvironmentalLogo} className="categoryLogo"/>
+                            <img src={EnvironmentalLogo} alt = 'environmental logo' className="categoryLogo"/>
                             <h1 className="categoryDescription"> Environmental Charities</h1>
                         </div>
-                        
                         <EnvironmentalList />
                         
                     </div>
@@ -113,10 +101,9 @@ const SingleCategory = (charity) => {
                 return (
                     <div className="flex-row">
                         <div className="categoryHeader">
-                            <img src={FavoriteLogo} className="categoryLogo"/>
+                            <img src={FavoriteLogo} alt = 'favorites logo' className="categoryLogo"/>
                             <h1 className="categoryDescription">My Charities</h1>
                         </div>
-                        
                         <SavedCharities />
                         
                     </div>
@@ -146,21 +133,5 @@ const SingleCategory = (charity) => {
     )
 }
 
-// import React from 'react';
-// import {Link} from 'react-router-dom';
-
-// const CharityList = ({name, location, url, mission, category}) => {
-    
-//     return (
-//         <div>
-//             <h5>
-//                 {category}
-//             </h5>
-//             {category && category.map(singleCategory => (
-//                 <div key = {category._id} 
-//             ))}
-//         </div>
-//     )
-// }
 
 export default SingleCategory;

@@ -4,10 +4,7 @@ import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import Login from '../../pages/Login';
 import Signup from '../../pages/Signup';
-import Profile from '../../pages/Profile';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-
-//import logo from '../../assets/hero.jpg';
+import {Route} from 'react-router-dom';
 
 const Header = () => {
   const logout = event => {
@@ -29,7 +26,6 @@ const Header = () => {
               <div className="loginSignupButtons">
                 {Auth.loggedIn() ? (
                 <>
-                  <Link to = '/Profile' class="button">My Charities</Link>
                   <a href = '/' onClick = {logout} class="button">Logout</a>
                 </>
               ) : (
@@ -40,12 +36,11 @@ const Header = () => {
               )}
               </div>
               <div className="loginSignupForm">
-          <Route exact path = '/login' component = {Login} />
-          <Route exact path = '/signup' component = {Signup} />
-          <Route exact path = '/profile/:username?' component = {Profile} />
-        </div>
+                <Route exact path = '/login' component = {Login} />
+                <Route exact path = '/signup' component = {Signup} />
+          
+              </div>
             </nav>
-            
       </div>     
     </header>
     
