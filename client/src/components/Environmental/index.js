@@ -29,7 +29,7 @@ const EnvironmentalList = () => {
 
     return (
         <section className="my-5">
-            <ul class="category">
+            <ul className ="category">
                 {environment.map((env) => (
                     <li className="my-2" key = {env._id}>
                         <span className="test flex-row">

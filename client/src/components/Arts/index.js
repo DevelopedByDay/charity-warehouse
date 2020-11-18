@@ -29,7 +29,7 @@ const ArtsList = () => {
     return (
         <section className="my-5">
            
-            <ul class="category">
+            <ul className="category">
                 {arts.map((art) => (
                     <li className="my-2" key = {art._id}>
                         <span className="test flex-row">

@@ -65,6 +65,7 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^5.3.0"
+    "concurrently": "^5.3.0",
+    "webpack-pwa-manifest": "^4.2.0"
   }
 }

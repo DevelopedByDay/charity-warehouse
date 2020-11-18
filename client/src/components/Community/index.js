@@ -30,7 +30,7 @@ const CommDevList = () => {
 
     return (
         <section className="my-5">
-            <ul class="category">
+            <ul className="category">
                 {commDevs.map((community) => (
                     <li className="my-2" key = {community._id}>
                         <span className="test flex-row">

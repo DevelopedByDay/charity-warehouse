@@ -29,7 +29,7 @@ const CivilRightsList = () => {
 
     return (
         <section className="my-5">
-            <ul class="category">
+            <ul className="category">
                 {civilRights.map((civilRight) => (
                     <li className="my-2" key = {civilRight.name}>
                         <span className="test flex-row">

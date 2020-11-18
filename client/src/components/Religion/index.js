@@ -32,7 +32,7 @@ const ReligionList = () => {
     
     return (
         <section className="my-5">
-            <ul class="category">
+            <ul className="category">
                 {religions.map((religion) => (
                     <li className="my-2" key = {religion._id}>
                         <span className="test flex-row">

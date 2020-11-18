@@ -26,12 +26,12 @@ const Header = () => {
               <div className="loginSignupButtons">
                 {Auth.loggedIn() ? (
                 <>
-                  <a href = '/' onClick = {logout} class="button">Logout</a>
+                  <a href = '/' onClick = {logout} className="button">Logout</a>
                 </>
               ) : (
                 <>
-                <Link to = '/login' class="button login">Login</Link>
-                <Link to = '/signup' class="button signup">Signup</Link>
+                <Link to = '/login' className="button login">Login</Link>
+                <Link to = '/signup' className="button signup">Signup</Link>
                 </>
               )}
               </div>
