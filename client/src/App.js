@@ -10,7 +10,7 @@ import FavoritesLogo from '../src/assets/favorites.png';
 import EnvironmentalLogo from '../src/assets/Environmental.png';
 import ReligionsLogo from '../src/assets/religions.png';
 import {BrowserRouter as Router} from 'react-router-dom';
-import './App.css';
+// import './App.css';
 import {ApolloProvider} from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 import SingleCategory from './components/SingleCategory';
